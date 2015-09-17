@@ -1,1 +1,1 @@
-Implement Queue and Typical Usage
+Implementation of Queue and typical usage
