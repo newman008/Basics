@@ -1,3 +1,5 @@
+##### LinkedList vs ArrayList?
+##### final, finally, finalize()?
+##### Static?
 
-## Java basic concepts
 
