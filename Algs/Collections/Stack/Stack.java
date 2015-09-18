@@ -1,21 +1,28 @@
 import java.util.Iterator;
 
-public class ResizingArrayStack<Item> implements Iterable<Item> {
-	private Item[] array;  // array of items
-	private int N;         // numbers of items in the stack
+public class Stack<Item> implements Iterable<Item> {
+	private int N;                // size of stack
+	private Node<Item> first;     // top of stack
+
+	// helper linkedlist class
+	private class Node<Item> {
+		Item item;
+		Node<Item> next;
+	}
 
 	/*
-	 * Initialize an empty stack with capacity 10
-	 */
-	public ResizingArrayStack() {
-		array = (Item[]) new Object[10];
+	 * Initialize an empty stack
+	 */ 
+	public Stack() {
+		first = null;
+		N = 0;
 	}
 
 	/*
 	 * Return true if the stack is empty; false otherwise
 	 */
 	public boolean isEmpty() {
-		return N == 0;
+		return first == null;
 	}
 
 	/*
@@ -29,19 +36,20 @@ public class ResizingArrayStack<Item> implements Iterable<Item> {
 	 * Add an item to the stack
 	 */
 	public void push(Item item) {
-		if(N == array.length) resize(2 * array.length);
-		array[N++] = item;
+		Node<Item> oldFirst = first;
+		first = new Node<Item>();
+		first.item = item;
+		first.next = oldFirst;
+		N++;
 	}
 
 	/*
 	 * Remove and return the most recently item added to the stack 
 	 */ 
 	public Item pop() {
-		Item item = array[N-1];
-		array[N-1] = null;
+		Item item = first.item;
+		first = first.next;
 		N--;
-		// shrink the size of stack if necessary
-		if(N > 0 && N == array.length / 4) resize(array.length / 2);
 		return item;
 	}
 
@@ -49,55 +57,44 @@ public class ResizingArrayStack<Item> implements Iterable<Item> {
 	 * Return the most recently item added to the stack
 	 */
 	public Item peek() {
-		return array[N-1];
-	}
-
-	/*
-	 * Helper method to resize the array
-	 */
-	private void resize(int capacity) {
-		Item[] tmp = (Item[]) new Object[capacity];
-		for(int i = 0; i < N; i++) {
-			tmp[i] = array[i];
-		}
-		array = tmp;
+		return first.item;
 	}
 
 	/*
 	 * Return an iterator, override abstract method iterator() in Iterable
 	 */
 	public Iterator<Item> iterator() {
-		return new ResizingArrayStackIterator();
+		return new StackIterator<Item>(first);
 	}
 
 	/*
 	 * An iterator class that iterates the items in LIFO order
 	 */ 
-	private class ResizingArrayStackIterator implements Iterator<Item> {
-		private int i;
+	private class StackIterator<Item> implements Iterator<Item> {
+		private Node<Item> current;
 
-		public ResizingArrayStackIterator() {
-			i = N - 1;
+		public StackIterator(Node<Item> first) {
+			current = first;
 		}
 
 		public boolean hasNext() {
-			return i >= 0;
+			return current != null;
 		}
 
 		public Item next() {
-			return array[i--];
+			Item item = current.item;
+			current = current.next;
+			return item;
 		}
 
-		public void remove() {
-
-		}
+		public void remove() {}
 	}
 
 	/*
 	 * test client
 	 */
 	public static void main(String[] args) {
-		ResizingArrayStack<String> stack = new ResizingArrayStack<String>();
+		Stack<String> stack = new Stack<String>();
 		String[] texts = {"to", "be", "or", "not", "to", "-", "be", "-", "-", "that", "-", "-", "-", "is"};
 		for(String text : texts) {
 			if(!text.equals("-")) stack.push(text);
