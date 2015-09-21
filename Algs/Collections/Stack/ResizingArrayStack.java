@@ -2,7 +2,7 @@ import java.util.Iterator;
 
 public class ResizingArrayStack<Item> implements Iterable<Item> {
 	private Item[] array;  // array of items
-	private int N;         // numbers of items in the stack
+	private int N;         // number of items in the stack
 
 	/*
 	 * Initialize an empty stack with capacity 10
