@@ -95,6 +95,7 @@ public class ResizingArrayStack<Item> implements Iterable<Item> {
 
 	/*
 	 * test client
+	 * output: to be not that or be
 	 */
 	public static void main(String[] args) {
 		ResizingArrayStack<String> stack = new ResizingArrayStack<String>();

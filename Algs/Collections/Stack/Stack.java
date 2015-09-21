@@ -92,6 +92,7 @@ public class Stack<Item> implements Iterable<Item> {
 
 	/*
 	 * test client
+	 * output: to be not that or be
 	 */
 	public static void main(String[] args) {
 		Stack<String> stack = new Stack<String>();
