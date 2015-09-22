@@ -1,7 +1,6 @@
 package Hash;
 
 public class LinearProbingHashTable<Key, Value> {
-	
 	private int N;           // number of key-value pairs in the symbol table
     private int M;           // size of linear probing table
     private Key[] keys;      // the keys
