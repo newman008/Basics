@@ -3,10 +3,10 @@ package LeetCode2;
 import java.util.Stack;
 
 class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-        TreeNode(int x) { val = x; }
+	int val;
+	TreeNode left;
+	TreeNode right;
+	TreeNode(int x) { val = x; }
 }
 
 public class _101_SymmetricTree {
