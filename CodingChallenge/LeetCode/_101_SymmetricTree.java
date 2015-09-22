@@ -21,9 +21,9 @@ public class _101_SymmetricTree {
 		if(left == null && right == null) return true;
 		if(left == null || right == null) return false;
 		if(left.val == right.val) {
-		    return isMirror(left.left, right.right) && isMirror(left.right, right.left);
+			return isMirror(left.left, right.right) && isMirror(left.right, right.left);
 		} else {
-		    return false;
+			return false;
 		}
 	}
     
