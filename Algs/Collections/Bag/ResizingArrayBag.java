@@ -57,17 +57,9 @@ public class ResizingArrayBag<Item> implements Iterable<Item> {
 	private class ResizingArrayBagIterator implements Iterator<Item> {
 		private int i = 0;;
 
-		public boolean hasNext() {
-			return i < N;
-		}
-
-		public Item next() {
-			return array[i++];
-		}
-
-		public void remove() {
-
-		}
+		public boolean hasNext() { return i < N; }
+		public Item next() { return array[i++]; }
+		public void remove() {}
 	}
 
 	/**

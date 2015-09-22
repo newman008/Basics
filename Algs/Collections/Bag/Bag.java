@@ -70,9 +70,7 @@ public class Bag<Item> implements Iterable<Item> {
 			return item;
 		}
 
-		public void remove() {
-
-		}
+		public void remove() {}
 	}
 
 	/**

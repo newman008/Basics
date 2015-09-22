@@ -16,4 +16,5 @@ public class String {
 	public int hash(String s) {
 		return (s.hashCode() & 0x7fffffff) % M;
 	}
+
 }
