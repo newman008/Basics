@@ -7,13 +7,13 @@ public class LinearProbingHashTable<Key, Value> {
 	private Value[] vals;    // the values
 	
 	public LinearProbingHashTable(int capacity) {
-	    M = capacity;
+		M = capacity;
 		keys = (Key[])   new Object[M];
-	    vals = (Value[]) new Object[M];
+		vals = (Value[]) new Object[M];
 	}
 
 	public int size() {
-	    return N;
+		return N;
 	}
 
 	public boolean isEmpty() {
