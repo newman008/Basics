@@ -16,8 +16,7 @@ public class _200_NumberOfIslands {
 				}
 			}
 		}
-	        return count;
-		
+		return count;
 	}
     
 	private void bfs(char[][] grid, boolean[][] visited, int i, int j) {
@@ -28,7 +27,6 @@ public class _200_NumberOfIslands {
 		bfs(grid, visited, i+1, j);
 		bfs(grid, visited, i, j-1);
 		bfs(grid, visited, i, j+1);
-		
 	}
     
 	public static void main(String[] args) {
@@ -39,6 +37,5 @@ public class _200_NumberOfIslands {
 		grid[0][1] = '1';
 		
 		System.out.print(t.numIslands(grid));
-		
 	}
 }
