@@ -14,9 +14,9 @@ public class MinPQ<Key> implements Iterable<Key> {
 	}
 
 	public MinPQ(int initCapacity, Comparator<Key> comparator) {
-	    this.comparator = comparator;
-	    pq = (Key[]) new Object[initCapacity + 1];
-	    N = 0;
+		this.comparator = comparator;
+		pq = (Key[]) new Object[initCapacity + 1];
+		N = 0;
 	}
 
 	public MinPQ(Key[] keys) {

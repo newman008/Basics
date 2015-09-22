@@ -2,28 +2,32 @@ package LeetCode2;
 
 import java.util.Stack;
 
+class TreeNode {
+        int val;
+        TreeNode left;
+        TreeNode right;
+        TreeNode(int x) { val = x; }
+}
+
 public class _101_SymmetricTree {
-	public class TreeNode {
-	    int val;
-	 	TreeNode left;
-	 	TreeNode right;
-	 	TreeNode(int x) { val = x; }
-	}
-	// public boolean isSymmetric(TreeNode root) {
-    //     if(root == null) return true;
-    //     return isMirror(root.left, root.right);
-    // }
+
+    // recursive
+	public boolean isSymmetricR(TreeNode root) {
+        if(root == null) return true;
+        return isMirror(root.left, root.right);
+    }
     
-    // public boolean isMirror(TreeNode left, TreeNode right) {
-    //     if(left == null && right == null) return true;
-    //     if(left == null || right == null) return false;
-    //     if(left.val == right.val) {
-    //         return isMirror(left.left, right.right) && isMirror(left.right, right.left);
-    //     } else {
-    //         return false;
-    //     }
-    // }
+    public boolean isMirror(TreeNode left, TreeNode right) {
+        if(left == null && right == null) return true;
+        if(left == null || right == null) return false;
+        if(left.val == right.val) {
+            return isMirror(left.left, right.right) && isMirror(left.right, right.left);
+        } else {
+            return false;
+        }
+    }
     
+    // iterative
     public boolean isSymmetric(TreeNode root) {
         if(root == null) return true;
         Stack<TreeNode> stack = new Stack<TreeNode>();
