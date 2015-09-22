@@ -10,8 +10,8 @@ class TreeNode {
 }
 
 public class _101_SymmetricTree {
-
-    	// recursive
+	
+	// recursive
 	public boolean isSymmetricR(TreeNode root) {
 		if(root == null) return true;
 		return isMirror(root.left, root.right);
