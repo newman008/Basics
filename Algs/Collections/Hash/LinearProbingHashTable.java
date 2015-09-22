@@ -79,7 +79,7 @@ public class LinearProbingHashTable<Key, Value> {
 	}
 
 	private int hash(Key key) {
-	    return (key.hashCode() & 0x7fffffff) % M;
+		return (key.hashCode() & 0x7fffffff) % M;
 	}
 
 	private void resize(int capacity) {

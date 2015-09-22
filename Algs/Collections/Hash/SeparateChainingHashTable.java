@@ -55,10 +55,10 @@ public class SeparateChainingHashTable<Key, Value> {
 		private Node next;
 		
 		public Node(Object key, Object val, Node next)  {
-            this.key  = key;
-            this.val  = val;
-            this.next = next;
-        }
+		 	this.key  = key;
+		 	this.val  = val;
+		 	this.next = next;
+		}
 	}
 	
 	public static void main(String[] args) {
