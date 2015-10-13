@@ -18,8 +18,8 @@ public class _206_ReverseLinkedList {
 		head.next = newHead;
 		return reverse(head, cur);
 	}
-    
-    // iterate 
+	
+	// iterate 
 	public ListNode reverseList2(ListNode head) {
 		ListNode newHead = null;
 		while(head != null) {
