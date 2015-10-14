@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class _17_LetterCombinationOfPhoneNumber {
-private static final String[] keys = {"", "", "abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz"};
+    private static final String[] keys = {"", "", "abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz"};
     
     public List<String> letterCombinations(String digits) {
         List<String> res = new ArrayList<String>();
