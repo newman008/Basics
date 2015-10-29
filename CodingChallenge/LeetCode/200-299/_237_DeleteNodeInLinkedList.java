@@ -13,8 +13,8 @@ class ListNode {
  }
 
 public class _237_DeleteNodeInLinkedList {
-	
-	public void deleteNode(ListNode node) {
+    
+    public void deleteNode(ListNode node) {
         if(node == null) return;
         
         if(node.next == null) {
@@ -29,9 +29,9 @@ public class _237_DeleteNodeInLinkedList {
         
     }
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
 
-	}
+    }
 
 }

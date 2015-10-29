@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class _216_CombinationSum3 {
-	public List<List<Integer>> combinationSum3(int k, int n) {
+    public List<List<Integer>> combinationSum3(int k, int n) {
         List<List<Integer>> results = new ArrayList<List<Integer>>();
         List<Integer> res = new ArrayList<Integer>();
         dfs(results, res, k, n, 1);

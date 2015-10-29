@@ -10,7 +10,7 @@ For example,
 import java.util.*;
 
 public class _266_PalindromePermutation {
-	public boolean canPermutePalindrome(String s) {
+    public boolean canPermutePalindrome(String s) {
         Map<Character, Integer> map = new HashMap<Character, Integer>();
         for(char ch : s.toCharArray()){
             if(map.containsKey(ch)){
@@ -34,9 +34,9 @@ public class _266_PalindromePermutation {
         
         return res;
     }
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
 
-	}
+    }
 
 }

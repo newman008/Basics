@@ -1,7 +1,7 @@
 package LeetCode2;
 
 public class _260_SingleNumber3 {
-	public int[] singleNumber(int[] nums) {
+    public int[] singleNumber(int[] nums) {
         int[] res = new int[2];
         
         int xor = nums[0];
@@ -23,9 +23,9 @@ public class _260_SingleNumber3 {
         
         return res;
     }
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
 
-	}
+    }
 
 }

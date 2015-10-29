@@ -12,8 +12,8 @@ Could you solve it with constant space complexity? (Note: The output array does 
  */
 
 public class _238_ProductOfArrayExceptSelf {
-	
-	public int[] productExceptSelf(int[] nums) {
+    
+    public int[] productExceptSelf(int[] nums) {
         if(nums == null || nums.length == 0) return nums;
         
         int l = nums.length;
@@ -33,9 +33,9 @@ public class _238_ProductOfArrayExceptSelf {
         return res;
     }
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
 
-	}
+    }
 
 }

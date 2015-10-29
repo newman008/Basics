@@ -20,8 +20,8 @@ Return:
 import java.util.*;
 
 public class _249_GroupShiftedStrings {
-	
-	public List<List<String>> groupStrings(String[] strings) {
+    
+    public List<List<String>> groupStrings(String[] strings) {
         List<List<String>> res = new ArrayList<List<String>>();
         if(strings == null || strings.length == 0) return res;
         
@@ -51,9 +51,9 @@ public class _249_GroupShiftedStrings {
         return res;
     }
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
 
-	}
+    }
 
 }

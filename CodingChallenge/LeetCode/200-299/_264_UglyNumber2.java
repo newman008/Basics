@@ -1,7 +1,7 @@
 package LeetCode2;
 
 public class _264_UglyNumber2 {
-	// naive solution, O(N) where N is the total number from 1 to N that contains n ugly number
+    // naive solution, O(N) where N is the total number from 1 to N that contains n ugly number
     public int nthUglyNumber(int n) {
         int count = 0;
         int i = 0;
@@ -59,8 +59,8 @@ public class _264_UglyNumber2 {
     }
     
     public static void main(String[] args) {
-		// TODO Auto-generated method stub
-    		_264_UglyNumber2 s = new _264_UglyNumber2();
-    		System.out.print(s.nthUglyNumber2(11));
-	}
+        // TODO Auto-generated method stub
+            _264_UglyNumber2 s = new _264_UglyNumber2();
+            System.out.print(s.nthUglyNumber2(11));
+    }
 }

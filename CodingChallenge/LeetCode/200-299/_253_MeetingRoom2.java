@@ -18,7 +18,7 @@ class Interval {
   }
 
 public class _253_MeetingRoom2 {
-	public int minMeetingRooms(Interval[] intervals) {
+    public int minMeetingRooms(Interval[] intervals) {
         if(intervals == null || intervals.length == 0) return 0;
         
         Arrays.sort(intervals, new Comparator<Interval>(){
@@ -51,9 +51,9 @@ public class _253_MeetingRoom2 {
         
         return queue.size();
     }
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
 
-	}
+    }
 
 }

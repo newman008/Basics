@@ -13,9 +13,9 @@ Assume that the BST is balanced, could you solve it in less than O(n) runtime (w
 
 public class _272_ClosestBSTValue {
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
 
-	}
+    }
 
 }

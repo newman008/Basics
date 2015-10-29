@@ -20,8 +20,8 @@ Given target = 5, return true.
  */
 
 public class _240_Search2DMatrix2 {
-	
-	public boolean searchMatrix(int[][] matrix, int target) {
+    
+    public boolean searchMatrix(int[][] matrix, int target) {
         if(matrix == null || matrix.length == 0) return false;
         
         int m = matrix.length;
@@ -42,9 +42,9 @@ public class _240_Search2DMatrix2 {
         return false;
     }
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
 
-	}
+    }
 
 }

@@ -5,15 +5,15 @@ package LeetCode2;
  */
 
 public class _231_PowerOfTwo {
-	
-	public boolean isPowerOfTwo(int n) {
+    
+    public boolean isPowerOfTwo(int n) {
         if(n <= 0) return false;
         return (n & (n-1)) == 0;
     }
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
 
-	}
+    }
 
 }

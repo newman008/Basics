@@ -11,7 +11,7 @@ return false.
  */
 
 public class _252_MeetingRoom1 {
-	public boolean canAttendMeetings(Interval[] intervals) {
+    public boolean canAttendMeetings(Interval[] intervals) {
         if(intervals == null || intervals.length == 0) return true;
         
         Arrays.sort(intervals, new Comparator<Interval>(){

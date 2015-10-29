@@ -16,8 +16,8 @@ Could you solve it in O(n2) runtime?
 import java.util.Arrays;
 
 public class _259_3SumSmaller {
-	
-	public int threeSumSmaller(int[] nums, int target) {
+    
+    public int threeSumSmaller(int[] nums, int target) {
         if(nums == null || nums.length == 0) return 0;
         
         Arrays.sort(nums);
@@ -39,9 +39,9 @@ public class _259_3SumSmaller {
         return count;
     }
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
 
-	}
+    }
 
 }

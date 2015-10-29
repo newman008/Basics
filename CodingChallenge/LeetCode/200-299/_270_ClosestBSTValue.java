@@ -9,31 +9,31 @@ package LeetCode2;
  */
 
 public class _270_ClosestBSTValue {
-	public int closestValue(TreeNode root, double target) {
+    public int closestValue(TreeNode root, double target) {
         double distance = Math.abs(root.val - target);
         int res = root.val;
 
         while(root != null) {
-        	if(root.val >= target) {
-        		if(Math.abs(root.val - target) < distance) {
-        			distance = Math.abs(root.val - target);
-        			res = root.val;
-        		}
-        		root = root.left;
-        	} else {
-        		if(Math.abs(root.val - target) < distance) {
-        			distance = Math.abs(root.val - target);
-        			res = root.val;
-        		}
-        		root = root.right;
-        	}
+            if(root.val >= target) {
+                if(Math.abs(root.val - target) < distance) {
+                    distance = Math.abs(root.val - target);
+                    res = root.val;
+                }
+                root = root.left;
+            } else {
+                if(Math.abs(root.val - target) < distance) {
+                    distance = Math.abs(root.val - target);
+                    res = root.val;
+                }
+                root = root.right;
+            }
         }
 
         return res;
     }
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
 
-	}
+    }
 
 }

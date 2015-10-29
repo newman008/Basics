@@ -1,7 +1,7 @@
 package LeetCode2;
 
 public class _211_AddAndSearchWord {
-	class TrieNode {
+    class TrieNode {
         public boolean isLeaf;
         public char c;
         TrieNode[] children = new TrieNode[26];

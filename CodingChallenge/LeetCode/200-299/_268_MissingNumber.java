@@ -10,7 +10,7 @@ Your algorithm should run in linear runtime complexity. Could you implement it u
  */
 
 public class _268_MissingNumber {
-	public int missingNumber(int[] nums) {
+    public int missingNumber(int[] nums) {
         for(int i = 0; i < nums.length; i++) {
             if(i != nums[i] && nums[i] >= 0 && nums[i] < nums.length){
                 swap(nums, i, nums[i]);

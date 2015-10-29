@@ -1,7 +1,7 @@
 package LeetCode2;
 
 public class _214_ShortestPalindrome {
-	public String shortestPalindrome(String s) {
+    public String shortestPalindrome(String s) {
         if(s == null || s.length() <= 1) return s;
         int mid = (s.length() - 1) / 2;
         String res = new String();

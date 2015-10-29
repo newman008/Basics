@@ -1,7 +1,7 @@
 package LeetCode2;
 
 public class _221_MaximumSquare {
-	public int maximalSquare(char[][] matrix) {
+    public int maximalSquare(char[][] matrix) {
         if(matrix == null || matrix.length == 0) return 0;
         int m = matrix.length;
         int n = matrix[0].length;

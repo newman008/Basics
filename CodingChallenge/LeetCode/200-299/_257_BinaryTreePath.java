@@ -3,7 +3,7 @@ package LeetCode2;
 import java.util.*;
 
 public class _257_BinaryTreePath {
-	public List<String> binaryTreePaths(TreeNode root) {
+    public List<String> binaryTreePaths(TreeNode root) {
         List<String> res = new ArrayList<String>();
         if(root == null) return res;
         
@@ -31,9 +31,9 @@ public class _257_BinaryTreePath {
         }
         
     }
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
 
-	}
+    }
 
 }

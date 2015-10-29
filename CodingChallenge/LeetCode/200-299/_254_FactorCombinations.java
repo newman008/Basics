@@ -16,8 +16,8 @@ Factors should be greater than 1 and less than n.
 import java.util.*;
 
 public class _254_FactorCombinations {
-	
-	public List<List<Integer>> getFactors(int n) {
+    
+    public List<List<Integer>> getFactors(int n) {
         // if(isPrime(n) || n == 1) {
         //     return new ArrayList<Integer>();
         // }
@@ -51,10 +51,10 @@ public class _254_FactorCombinations {
         return isPrime;
     }
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		_254_FactorCombinations t = new _254_FactorCombinations();
-		t.getFactors(4);
-	}
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+        _254_FactorCombinations t = new _254_FactorCombinations();
+        t.getFactors(4);
+    }
 
 }

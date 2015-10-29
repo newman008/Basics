@@ -18,8 +18,8 @@ You may assume word1 and word2 are both in the list.
  */
 
 public class _245_ShortestWordDistance3 {
-	
-	public int shortestWordDistance(String[] words, String word1, String word2) {
+    
+    public int shortestWordDistance(String[] words, String word1, String word2) {
         int min = words.length;
         
         int index1 = -1;
@@ -59,9 +59,9 @@ public class _245_ShortestWordDistance3 {
         return min;
     }
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
 
-	}
+    }
 
 }

@@ -3,7 +3,7 @@ package LeetCode2;
 import java.util.*;
 
 public class _247_StrobogrammaticNumber2 {
-	public List<String> findStrobogrammatic(int n) {
+    public List<String> findStrobogrammatic(int n) {
         return helper(n, n);
     }
     

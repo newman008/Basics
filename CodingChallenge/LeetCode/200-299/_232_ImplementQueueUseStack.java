@@ -3,8 +3,8 @@ package LeetCode2;
 import java.util.Stack;
 
 public class _232_ImplementQueueUseStack {
-	
-	Stack<Integer> stack1 = new Stack<Integer>();
+    
+    Stack<Integer> stack1 = new Stack<Integer>();
     Stack<Integer> stack2 = new Stack<Integer>();
     
     // Push element x to the back of queue.
@@ -37,9 +37,9 @@ public class _232_ImplementQueueUseStack {
         return stack1.isEmpty() && stack2.isEmpty();
     }
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
 
-	}
+    }
 
 }

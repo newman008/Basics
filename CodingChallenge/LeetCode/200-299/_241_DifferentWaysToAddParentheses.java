@@ -15,8 +15,8 @@ Output: [0, 2]
  */
 
 public class _241_DifferentWaysToAddParentheses {
-	
-	public List<Integer> diffWaysToCompute(String input) {
+    
+    public List<Integer> diffWaysToCompute(String input) {
         List<Integer> ret = new LinkedList<Integer>();
         boolean flag = false;
         
@@ -51,9 +51,9 @@ public class _241_DifferentWaysToAddParentheses {
         return ret;
     }
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
 
-	}
+    }
 
 }

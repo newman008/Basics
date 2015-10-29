@@ -17,8 +17,8 @@ By calling next repeatedly until hasNext returns false, the order of elements re
  */
 
 public class _251_Flatten2DVecter {
-	
-	private Iterator<List<Integer>> i;
+    
+    private Iterator<List<Integer>> i;
     private Iterator<Integer> j;
 
     public _251_Flatten2DVecter(List<List<Integer>> vec2d) {
@@ -36,9 +36,9 @@ public class _251_Flatten2DVecter {
         return j != null && j.hasNext();
     }
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
 
-	}
+    }
 
 }

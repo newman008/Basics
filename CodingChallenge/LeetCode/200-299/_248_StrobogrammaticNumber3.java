@@ -15,7 +15,7 @@ Because the range might be a large number, the low and high numbers are represen
  */
 
 public class _248_StrobogrammaticNumber3 {
-	Map<Character, Character> map = new HashMap<Character, Character>();
+    Map<Character, Character> map = new HashMap<Character, Character>();
     String low = "", high = "";
     
     public int strobogrammaticInRange(String low, String high) {

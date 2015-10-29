@@ -9,8 +9,8 @@ Return 6, because digit 1 occurred in the following numbers: 1, 10, 11, 12, 13.
  */
 
 public class _233_NumberOfDigitOne {
-	
-	public int countDigitOne(int n) {
+    
+    public int countDigitOne(int n) {
         int count = 0;
         
         for(long m = 1; m <= n; m = m * 10) {
@@ -22,9 +22,9 @@ public class _233_NumberOfDigitOne {
         return count;
     }
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
 
-	}
+    }
 
 }

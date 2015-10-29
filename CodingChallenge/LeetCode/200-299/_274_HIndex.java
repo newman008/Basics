@@ -10,22 +10,22 @@ import java.util.Arrays;
  */
 
 public class _274_HIndex {
-	
-	public int hIndex(int[] citations) {
+    
+    public int hIndex(int[] citations) {
         Arrays.sort(citations);
         int h = 0;
         int n = citations.length;
         for(int i = n-1; i >= 0; i--) {
-        		if(citations[i] > h) h++;
-        		else break;
+                if(citations[i] > h) h++;
+                else break;
         }
         return h;
-        	
+            
     }
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
 
-	}
+    }
 
 }

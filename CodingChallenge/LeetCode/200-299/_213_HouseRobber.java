@@ -1,7 +1,7 @@
 package LeetCode2;
 
 public class _213_HouseRobber {
-	public int rob(int[] nums) {
+    public int rob(int[] nums) {
         if(nums == null || nums.length == 0) return 0;
         if(nums.length == 1) return nums[0];
         return Math.max(rob2(nums, 0, nums.length-2), rob2(nums, 1, nums.length-1));
@@ -21,9 +21,9 @@ public class _213_HouseRobber {
     }
     
     public static void main(String[] args) {
-		// TODO Auto-generated method stub
-    		_213_HouseRobber t = new _213_HouseRobber();
-    		int[] nums = {0, 0, 0};
-		System.out.print(t.rob(nums));
-	}
+        // TODO Auto-generated method stub
+            _213_HouseRobber t = new _213_HouseRobber();
+            int[] nums = {0, 0, 0};
+        System.out.print(t.rob(nums));
+    }
 }

@@ -3,8 +3,8 @@ package LeetCode2;
 import java.util.*;
 
 public class _228_SummaryRanges {
-	
-	public List<String> summaryRanges(int[] nums) {
+    
+    public List<String> summaryRanges(int[] nums) {
         List<String> res = new ArrayList<String>();
         if(nums == null || nums.length == 0) return res;
         
@@ -24,9 +24,9 @@ public class _228_SummaryRanges {
         return res;
     }
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
 
-	}
+    }
 
 }

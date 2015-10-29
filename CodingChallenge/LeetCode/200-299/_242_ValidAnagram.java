@@ -14,8 +14,8 @@ You may assume the string contains only lowercase alphabets.
  */
 
 public class _242_ValidAnagram {
-	
-	public boolean isAnagram(String s, String t) {
+    
+    public boolean isAnagram(String s, String t) {
         if(s.length() != t.length()) return false;
         
         char[] sa = s.toCharArray();
@@ -41,9 +41,9 @@ public class _242_ValidAnagram {
         return true;
     }
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
 
-	}
+    }
 
 }

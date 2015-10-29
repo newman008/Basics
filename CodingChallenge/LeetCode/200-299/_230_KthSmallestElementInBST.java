@@ -3,22 +3,22 @@ package LeetCode2;
 import java.util.Stack;
 
 public class _230_KthSmallestElementInBST {
-	public class TreeNode {
-	     int val;
-	     TreeNode left;
-	     TreeNode right;
-	     TreeNode(int x) { val = x; }
-	 }
-	
-	class ModifiedTreeNode {
+    public class TreeNode {
+         int val;
+         TreeNode left;
+         TreeNode right;
+         TreeNode(int x) { val = x; }
+     }
+    
+    class ModifiedTreeNode {
         int val;
         int count;
         ModifiedTreeNode left;
         ModifiedTreeNode right;
         ModifiedTreeNode(int x) {val = x; count=1; }
     }
-	
-	public int kthSmallest2(TreeNode root, int k) {
+    
+    public int kthSmallest2(TreeNode root, int k) {
         Stack<TreeNode> stack = new Stack<TreeNode>();
         TreeNode cur = root;
         
@@ -65,9 +65,9 @@ public class _230_KthSmallestElementInBST {
             else return kth(root.right, k-1);
         }
     }
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
 
-	}
+    }
 
 }

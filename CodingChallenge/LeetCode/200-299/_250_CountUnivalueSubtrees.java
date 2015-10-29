@@ -16,8 +16,8 @@ return 4.
  */
 
 public class _250_CountUnivalueSubtrees {
-	
-	public int countUnivalSubtrees(TreeNode root) {
+    
+    public int countUnivalSubtrees(TreeNode root) {
         int[] count = new int[1];
         helper(root, count);
         return count[0];
@@ -38,9 +38,9 @@ public class _250_CountUnivalueSubtrees {
             return false;
     }
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
 
-	}
+    }
 
 }

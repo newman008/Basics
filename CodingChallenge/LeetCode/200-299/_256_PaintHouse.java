@@ -13,22 +13,22 @@ public class _256_PaintHouse {
     public int minCost(int[][] costs) {
         if(costs == null || costs.length == 0) return 0;
         int m = 3;
-	    	int n = costs.length;
-	    
-	    	int[][] price = new int[m][n+1];
-	    
-	    	for(int i = 1; i <= n; i++) {
-	    		price[0][i] = Math.min(price[1][i-1], price[2][i-1]) + costs[i-1][0];
-	    		price[1][i] = Math.min(price[0][i-1], price[2][i-1]) + costs[i-1][1];
-	    		price[2][i] = Math.min(price[0][i-1], price[1][i-1]) + costs[i-1][2];
-	    	}
-	    
-	    	return Math.min(price[0][n], Math.min(price[1][n], price[2][n]));
+            int n = costs.length;
+        
+            int[][] price = new int[m][n+1];
+        
+            for(int i = 1; i <= n; i++) {
+                price[0][i] = Math.min(price[1][i-1], price[2][i-1]) + costs[i-1][0];
+                price[1][i] = Math.min(price[0][i-1], price[2][i-1]) + costs[i-1][1];
+                price[2][i] = Math.min(price[0][i-1], price[1][i-1]) + costs[i-1][2];
+            }
+        
+            return Math.min(price[0][n], Math.min(price[1][n], price[2][n]));
     }
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
 
-	}
+    }
 
 }

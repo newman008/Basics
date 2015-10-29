@@ -13,8 +13,8 @@ Given s = "abc", return [].
 import java.util.*;
 
 public class _267_PalindromePermutation2 {
-	
-	public List<String> generatePalindromes(String s) {
+    
+    public List<String> generatePalindromes(String s) {
         List<String> res = new ArrayList<String>();
         
         Map<Character, Integer> map = new HashMap<Character, Integer>();
@@ -82,11 +82,11 @@ public class _267_PalindromePermutation2 {
         }
     }
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		_267_PalindromePermutation2 t = new _267_PalindromePermutation2();
-		String s = "aabbcc";
-		t.generatePalindromes(s);
-	}
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+        _267_PalindromePermutation2 t = new _267_PalindromePermutation2();
+        String s = "aabbcc";
+        t.generatePalindromes(s);
+    }
 
 }

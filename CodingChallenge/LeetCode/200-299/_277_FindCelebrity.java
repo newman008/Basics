@@ -3,8 +3,8 @@ package LeetCode2;
 import java.util.*;
 
 public class _277_FindCelebrity {
-	
-	public int findCelebrity(int n) {
+    
+    public int findCelebrity(int n) {
         Queue<Integer> q = new LinkedList<Integer>();
         for(int i = 0; i < n; i++)
             q.offer(i);
@@ -28,14 +28,14 @@ public class _277_FindCelebrity {
         
         return c;
     }
-	
-	public boolean knows(int a, int b) {
-		return true;
-	}
+    
+    public boolean knows(int a, int b) {
+        return true;
+    }
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
 
-	}
+    }
 
 }

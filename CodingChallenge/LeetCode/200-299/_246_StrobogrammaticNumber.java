@@ -9,8 +9,8 @@ For example, the numbers "69", "88", and "818" are all strobogrammatic.
  */
 
 public class _246_StrobogrammaticNumber {
-	
-	public boolean isStrobogrammatic(String num) {
+    
+    public boolean isStrobogrammatic(String num) {
         StringBuilder sb = new StringBuilder();
         for(int i = num.length() - 1; i >= 0; i--) {
             char c = num.charAt(i);
@@ -23,9 +23,9 @@ public class _246_StrobogrammaticNumber {
         return num.equals(sb.toString());
     }
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
 
-	}
+    }
 
 }

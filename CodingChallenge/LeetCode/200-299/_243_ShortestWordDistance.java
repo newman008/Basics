@@ -14,8 +14,8 @@ You may assume that word1 does not equal to word2, and word1 and word2 are both 
  */
 
 public class _243_ShortestWordDistance {
-	
-	public int shortestDistance(String[] words, String word1, String word2) {
+    
+    public int shortestDistance(String[] words, String word1, String word2) {
         int min = words.length;
         
         int index1 = -1;
@@ -37,9 +37,9 @@ public class _243_ShortestWordDistance {
         return min;
     }
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
 
-	}
+    }
 
 }

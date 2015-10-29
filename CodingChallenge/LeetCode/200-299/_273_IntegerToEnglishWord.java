@@ -9,7 +9,7 @@ package LeetCode2;
  */
 
 public class _273_IntegerToEnglishWord {
-	final String[] strs = {"Billion", "Million", "Thousand", ""};
+    final String[] strs = {"Billion", "Million", "Thousand", ""};
     final String[] digits = {"Zero", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten", "Eleven", "Twelve", "Thirteen", "Fourteen", "Fifteen", "Sixteen", "Seventeen", "Eighteen", "Nineteen"};
     final String[] tens = {"", "Ten", "Twenty", "Thirty", "Forty", "Fifty", "Sixty", "Seventy", "Eighty", "Ninety"};
     
@@ -53,9 +53,9 @@ public class _273_IntegerToEnglishWord {
         return res;
     }
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
 
-	}
+    }
 
 }

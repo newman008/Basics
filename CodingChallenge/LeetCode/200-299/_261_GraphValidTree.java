@@ -13,8 +13,8 @@ Given n = 5 and edges = [[0, 1], [1, 2], [2, 3], [1, 3], [1, 4]], return false.
 import java.util.*;
 
 public class _261_GraphValidTree {
-	
-	public boolean validTree(int n, int[][] edges) {
+    
+    public boolean validTree(int n, int[][] edges) {
         // Union Find
         // verify 1: there is n-1 edges; 2: acyclic; 3: connected
         int[] nums = new int[n];
@@ -36,9 +36,9 @@ public class _261_GraphValidTree {
         else return find(nums, nums[i]);
     }
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
 
-	}
+    }
 
 }

@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.PriorityQueue;
 
 public class _218_SkyLineProblem {
-	class Edge {
+    class Edge {
         int x;
         int height;
         boolean isStart;
@@ -32,39 +32,39 @@ public class _218_SkyLineProblem {
         Collections.sort(edges, new Comparator<Edge>() {
             public int compare(Edge a, Edge b) {
                 if (a.x != b.x)
-				return a.x - b.x;
+                return a.x - b.x;
  
-    			if (a.isStart && b.isStart) {
-    				return b.height - a.height;
-    			}
+                if (a.isStart && b.isStart) {
+                    return b.height - a.height;
+                }
      
-    			if (!a.isStart && !b.isStart) {
-    				return a.height - b.height;
-    			}
+                if (!a.isStart && !b.isStart) {
+                    return a.height - b.height;
+                }
      
-    			return a.isStart ? -1 : 1;
+                return a.isStart ? -1 : 1;
             }
         });
         
         // process edges
-    	PriorityQueue<Integer> heightHeap = new PriorityQueue<Integer>(10, Collections.reverseOrder());
+        PriorityQueue<Integer> heightHeap = new PriorityQueue<Integer>(10, Collections.reverseOrder());
      
-    	for (Edge edge : edges) {
-    		if(edge.isStart) {
-    		    if(heightHeap.isEmpty() || edge.height > heightHeap.peek()) {
-    		        result.add(new int[]{edge.x, edge.height});
-    		    }
-    		    heightHeap.add(edge.height);
-    		} else { 
-    		    heightHeap.remove(edge.height);
-    		    if(heightHeap.isEmpty()) {
-    		        result.add(new int[]{edge.x, 0});
-    		    } else if(edge.height > heightHeap.peek()) {
-    		        result.add(new int[]{edge.x, heightHeap.peek()});
-    		    }
-    		}
-    	}
+        for (Edge edge : edges) {
+            if(edge.isStart) {
+                if(heightHeap.isEmpty() || edge.height > heightHeap.peek()) {
+                    result.add(new int[]{edge.x, edge.height});
+                }
+                heightHeap.add(edge.height);
+            } else { 
+                heightHeap.remove(edge.height);
+                if(heightHeap.isEmpty()) {
+                    result.add(new int[]{edge.x, 0});
+                } else if(edge.height > heightHeap.peek()) {
+                    result.add(new int[]{edge.x, heightHeap.peek()});
+                }
+            }
+        }
      
-    	return result;
+        return result;
     }
 }

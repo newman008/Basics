@@ -7,8 +7,8 @@ package LeetCode2;
  */
 
 public class _276_PaintFence {
-	
-	public int numWays(int n, int k) {
+    
+    public int numWays(int n, int k) {
         if(n == 0 || k == 0) return 0;
         if(n == 1) return k;
         
@@ -24,9 +24,9 @@ public class _276_PaintFence {
         return same + diff;
     }
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
 
-	}
+    }
 
 }

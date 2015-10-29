@@ -1,9 +1,9 @@
 package LeetCode2;
 
 public class _263_UglyNumber {
-	
-	// Naive solution
-	public boolean isUgly(int num) {
+    
+    // Naive solution
+    public boolean isUgly(int num) {
         if(num <= 0) return false;
         if(num == 1) return true;
         
@@ -13,8 +13,8 @@ public class _263_UglyNumber {
         else
             return false;
     }
-	
-	// Time Complexity: O(logN)
+    
+    // Time Complexity: O(logN)
     public boolean isUgly2(int num) {
         if(num <= 0) return false;
         if(num == 1) return true;
@@ -33,9 +33,9 @@ public class _263_UglyNumber {
         return num;
     }
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
 
-	}
+    }
 
 }

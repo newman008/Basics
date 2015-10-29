@@ -18,8 +18,8 @@ You may assume that word1 does not equal to word2, and word1 and word2 are both 
  */
 
 public class _244_ShortestWordDistance2 {
-	
-	Map<String, List<Integer>> map = new HashMap<String, List<Integer>>();
+    
+    Map<String, List<Integer>> map = new HashMap<String, List<Integer>>();
 
     public _244_ShortestWordDistance2(String[] words) {
         for(int i = 0; i < words.length; i++) {
@@ -53,9 +53,9 @@ public class _244_ShortestWordDistance2 {
         return min;
     }
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
 
-	}
+    }
 
 }

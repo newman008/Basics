@@ -4,7 +4,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 public class _225_ImplementStackUsingQueue {
-	Queue<Integer> q = new LinkedList<Integer>();
+    Queue<Integer> q = new LinkedList<Integer>();
     
     // Push element x onto stack.
     public void push(int x) {

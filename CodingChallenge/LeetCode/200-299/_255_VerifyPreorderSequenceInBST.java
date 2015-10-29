@@ -10,7 +10,7 @@ Could you do it using only constant space complexity?
  */
 
 public class _255_VerifyPreorderSequenceInBST {
-	public boolean verifyPreorder(int[] preorder) {
+    public boolean verifyPreorder(int[] preorder) {
         int min = Integer.MIN_VALUE;
         // Stack<Integer> stack = new Stack<Integer>();
         // use the array as stack
@@ -31,9 +31,9 @@ public class _255_VerifyPreorderSequenceInBST {
         
         return true;
     }
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
 
-	}
+    }
 
 }

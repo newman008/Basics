@@ -23,9 +23,9 @@ There may be multiple valid order of letters, return any one of them is fine.
 
 public class _269_AlienDictionary {
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
 
-	}
+    }
 
 }

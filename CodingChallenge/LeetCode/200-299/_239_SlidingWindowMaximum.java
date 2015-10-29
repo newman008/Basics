@@ -20,8 +20,8 @@ Therefore, return the max sliding window as [3,3,5,5,6,7].
  */
 
 public class _239_SlidingWindowMaximum {
-	
-	public int[] maxSlidingWindow(int[] nums, int k) {
+    
+    public int[] maxSlidingWindow(int[] nums, int k) {
         if(nums == null || nums.length == 0 || k < 1) return new int[]{};
         
         int[] res = new int[nums.length - k + 1];
@@ -50,9 +50,9 @@ public class _239_SlidingWindowMaximum {
         
     }
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
 
-	}
+    }
 
 }

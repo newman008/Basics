@@ -7,8 +7,8 @@ package LeetCode2;
 import java.util.*;
 
 public class _229_MajorityElement2 {
-	
-	public List<Integer> majorityElement(int[] nums) {
+    
+    public List<Integer> majorityElement(int[] nums) {
         List<Integer> res = new ArrayList<Integer>();
         if(nums == null || nums.length == 0) return res;
         
@@ -41,9 +41,9 @@ public class _229_MajorityElement2 {
         return res;
     }
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
 
-	}
+    }
 
 }

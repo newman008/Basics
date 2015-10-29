@@ -1,7 +1,7 @@
 package LeetCode2;
 
 public class _209_MinimumSizeSubarraySum {
-	public int minSubArrayLen2(int s, int[] nums) {
+    public int minSubArrayLen2(int s, int[] nums) {
         int sum = 0;
         int start = 0;
         int minLen = Integer.MAX_VALUE;
@@ -15,8 +15,8 @@ public class _209_MinimumSizeSubarraySum {
         }
         return minLen == Integer.MAX_VALUE ? 0 : minLen;
     }
-	
-	public int minSubArrayLen(int s, int[] nums) {
+    
+    public int minSubArrayLen(int s, int[] nums) {
         int[] sums = new int[nums.length+1];
         for(int i = 1; i < sums.length; i++) sums[i] = sums[i-1] + nums[i-1];
         int minLen = Integer.MAX_VALUE;
@@ -42,9 +42,9 @@ public class _209_MinimumSizeSubarraySum {
     }
     
     public static void main(String[] args) {
-		// TODO Auto-generated method stub
-    		_209_MinimumSizeSubarraySum t = new _209_MinimumSizeSubarraySum();
-    		int[] nums = {1, 5, 6};
-		System.out.print(t.minSubArrayLen(4, nums));
-	}
+        // TODO Auto-generated method stub
+            _209_MinimumSizeSubarraySum t = new _209_MinimumSizeSubarraySum();
+            int[] nums = {1, 5, 6};
+        System.out.print(t.minSubArrayLen(4, nums));
+    }
 }

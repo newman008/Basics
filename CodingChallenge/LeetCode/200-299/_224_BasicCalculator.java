@@ -3,7 +3,7 @@ package LeetCode2;
 import java.util.Stack;
 
 public class _224_BasicCalculator {
-	public int calculate(String s) {
+    public int calculate(String s) {
         Stack<Integer> stack = new Stack<Integer>();
         int l = s.length();
         int sign = 1;

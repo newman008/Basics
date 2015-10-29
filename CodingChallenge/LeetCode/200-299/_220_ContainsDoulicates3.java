@@ -3,7 +3,7 @@ package LeetCode2;
 import java.util.TreeSet;
 
 public class _220_ContainsDoulicates3 {
-	public boolean containsNearbyAlmostDuplicate(int[] nums, int k, int t) {
+    public boolean containsNearbyAlmostDuplicate(int[] nums, int k, int t) {
         if(k < 1 || t < 0) return false;
         
         TreeSet<Integer> set = new TreeSet<Integer>();
