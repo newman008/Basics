@@ -4,8 +4,8 @@ import java.io.*;
 import java.util.*;
 
 public class GroupAnagrams {
-	
-	public List<List<String>> groupAnagrams(String[] strs) {
+    
+    public List<List<String>> groupAnagrams(String[] strs) {
         List<List<String>> res = new ArrayList<List<String>>();
         if(strs == null || strs.length == 0) return res;
         
@@ -53,11 +53,11 @@ public class GroupAnagrams {
         return sb.toString();
     }
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		GroupAnagrams solution = new GroupAnagrams();
-		String[] strs = {"eat", "tea", "tan", "ate", "nat", "bat"};
-		solution.groupAnagrams(strs);
-	}
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+        GroupAnagrams solution = new GroupAnagrams();
+        String[] strs = {"eat", "tea", "tan", "ate", "nat", "bat"};
+        solution.groupAnagrams(strs);
+    }
 
 }

@@ -1,8 +1,8 @@
 package Misc;
 
 public class FriendCircles {
-	
-	static int friendCircles(String[] friends) {
+    
+    static int friendCircles(String[] friends) {
         // Union Find
         int n = friends.length;
         int[] array = new int[n];
@@ -36,11 +36,11 @@ public class FriendCircles {
         return i;
     }
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		String[] friends = {"YYNN", "YYYN", "NYYN", "NNNY"};
-		int res = FriendCircles.friendCircles(friends);
-		System.out.println(res);
-	}
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+        String[] friends = {"YYNN", "YYYN", "NYYN", "NNNY"};
+        int res = FriendCircles.friendCircles(friends);
+        System.out.println(res);
+    }
 
 }

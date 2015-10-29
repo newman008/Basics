@@ -12,34 +12,34 @@ import java.util.*;
  */
 
 public class CelebrityProblem {
-	
-	static int size = 4;
-	static int matrix[][] = {{0,0,1,0},  
-						     {0,0,1,0},  
-						     {0,0,0,0},  
-						     {0,0,1,0}};
-	
-	public static boolean haveAcquiantance(int a, int b){  
-		return matrix[a][b] != 0;  
+    
+    static int size = 4;
+    static int matrix[][] = {{0,0,1,0},  
+                             {0,0,1,0},  
+                             {0,0,0,0},  
+                             {0,0,1,0}};
+    
+    public static boolean haveAcquiantance(int a, int b){  
+        return matrix[a][b] != 0;  
     }  
-	
-	public static int celebrity(int size){
-		Stack<Integer> stack = new Stack<Integer>();
-		int C = -1;
-		for(int i = 0; i < size; i++) stack.push(i);
-		
-		int A = stack.pop();
-		int B = stack.pop();
-		while(stack.size() > 1) {
-			if(haveAcquiantance(A, B)){ // if A knows B
-				A = stack.pop();
-			} else {
-				B = stack.pop();
-			}
-		}
-		
-		C = stack.pop();
-		if(haveAcquiantance(C, B)){  
+    
+    public static int celebrity(int size){
+        Stack<Integer> stack = new Stack<Integer>();
+        int C = -1;
+        for(int i = 0; i < size; i++) stack.push(i);
+        
+        int A = stack.pop();
+        int B = stack.pop();
+        while(stack.size() > 1) {
+            if(haveAcquiantance(A, B)){ // if A knows B
+                A = stack.pop();
+            } else {
+                B = stack.pop();
+            }
+        }
+        
+        C = stack.pop();
+        if(haveAcquiantance(C, B)){  
             C = B;  
         }  
         if(haveAcquiantance(C, A)){  
@@ -47,16 +47,16 @@ public class CelebrityProblem {
         }  
         
         for(int i = 0; i < size; i++){
-        		if(C == i) continue;
-        		if(haveAcquiantance(C, i) || !haveAcquiantance(i, C)) return -1;
+                if(C == i) continue;
+                if(haveAcquiantance(C, i) || !haveAcquiantance(i, C)) return -1;
         }
         
         return C;
-	}
+    }
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		System.out.println(CelebrityProblem.celebrity(size));
-	}
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+        System.out.println(CelebrityProblem.celebrity(size));
+    }
 
 }

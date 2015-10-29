@@ -2,8 +2,8 @@ package InterviewQuestions;
 import java.util.*;
 
 public class NQueue {
-	
-	public List<List<String>> solveNQueens(int n) {
+    
+    public List<List<String>> solveNQueens(int n) {
         List<List<String>> results = new ArrayList<List<String>>();
         List<String> res = new ArrayList<String>();
         char[][] matrix = new char[n][n];
@@ -57,10 +57,10 @@ public class NQueue {
         return sb.toString();
     }
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		NQueue t = new NQueue();
-		List<List<String>> results = t.solveNQueens(1);
-	}
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+        NQueue t = new NQueue();
+        List<List<String>> results = t.solveNQueens(1);
+    }
 
 }

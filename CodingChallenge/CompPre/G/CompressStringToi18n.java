@@ -11,32 +11,32 @@ import java.util.List;
  */
 
 public class CompressStringToi18n {
-	
-	public static List<String> compress(String s) {
-		List<String> res = new ArrayList<String>();
-		if(s == null || s.length() == 0) return res;
-		
-		int l = s.length();
-		if(l <= 2) {
-			res.add(s);
-			return res;
-		}
-		
-		for(int i = l-2; i >= 1; i--) {
-			for(int j = 1; j + i < l; j++) {
-				res.add(s.substring(0, j) + i + s.substring(i+j));
-			}
-		}
-		
-		return res;
-	}
+    
+    public static List<String> compress(String s) {
+        List<String> res = new ArrayList<String>();
+        if(s == null || s.length() == 0) return res;
+        
+        int l = s.length();
+        if(l <= 2) {
+            res.add(s);
+            return res;
+        }
+        
+        for(int i = l-2; i >= 1; i--) {
+            for(int j = 1; j + i < l; j++) {
+                res.add(s.substring(0, j) + i + s.substring(i+j));
+            }
+        }
+        
+        return res;
+    }
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		List<String> res = CompressStringToi18n.compress("careercup");
-		for(String str : res) {
-			System.out.println(str);
-		}
-	}
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+        List<String> res = CompressStringToi18n.compress("careercup");
+        for(String str : res) {
+            System.out.println(str);
+        }
+    }
 
 }

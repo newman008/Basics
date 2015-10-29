@@ -1,8 +1,8 @@
 package InterviewQuestions;
 
 public class WildcardMatching {
-	
-	public boolean isMatch(String s, String p) {
+    
+    public boolean isMatch(String s, String p) {
         if(s == null || p == null || s.length() == 0 || p.length() == 0) return false;
         
         int m = s.length();
@@ -31,11 +31,11 @@ public class WildcardMatching {
         
         return dp[m][n];
     }
-	
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		WildcardMatching t = new WildcardMatching();
-		boolean res = t.isMatch("aa", "aa");
-	}
+    
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+        WildcardMatching t = new WildcardMatching();
+        boolean res = t.isMatch("aa", "aa");
+    }
 
 }
