@@ -13,69 +13,69 @@ use the built-in L inkedL ist data structure.
  */
 
 abstract class Animal{
-	private int order;
-	private String name;
-	public Animal(String s) {
-		name = s;
-	}
-	public void setOrder(int o) {
-		order = o;
-	}
-	public int getOrder() {
-		return order;
-	}
-	public boolean isOlderThan(Animal a) {
-		return this.order < a.order;
-	}
+    private int order;
+    private String name;
+    public Animal(String s) {
+        name = s;
+    }
+    public void setOrder(int o) {
+        order = o;
+    }
+    public int getOrder() {
+        return order;
+    }
+    public boolean isOlderThan(Animal a) {
+        return this.order < a.order;
+    }
 }
 
 class Dog extends Animal{
-	public Dog(String s) {
-		super(s);
-	}
+    public Dog(String s) {
+        super(s);
+    }
 }
 
 class Cat extends Animal{
-	public Cat(String s) {
-		super(s);
-	}
+    public Cat(String s) {
+        super(s);
+    }
 }
 
 public class _37 {
-	
-	LinkedList<Dog> dogs = new LinkedList<Dog>();
-	LinkedList<Cat> cats = new LinkedList<Cat>();
-	private int order = 0;
-	
-	public void enqueue(Animal a) {
-		a.setOrder(order);
-		order++;
-		if(a instanceof Dog) dogs.add((Dog)a);
-		else if(a instanceof Cat) cats.add((Cat)a);
-	}
-	
-	public Animal dequeueAny() {
-		if(dogs.size() == 0) return cats.poll();
-		if(cats.size() == 0) return dogs.poll();
-		
-		Dog d = dogs.peek();
-		Cat c = cats.peek();
-		
-		if(d.isOlderThan(c)) return dogs.poll();
-		else return cats.poll();
-	}
-	
-	public Dog dequeueDog() {
-		return dogs.poll();
-	}
-	
-	public Cat dequeueCat() {
-		return cats.poll();
-	}
+    
+    LinkedList<Dog> dogs = new LinkedList<Dog>();
+    LinkedList<Cat> cats = new LinkedList<Cat>();
+    private int order = 0;
+    
+    public void enqueue(Animal a) {
+        a.setOrder(order);
+        order++;
+        if(a instanceof Dog) dogs.add((Dog)a);
+        else if(a instanceof Cat) cats.add((Cat)a);
+    }
+    
+    public Animal dequeueAny() {
+        if(dogs.size() == 0) return cats.poll();
+        if(cats.size() == 0) return dogs.poll();
+        
+        Dog d = dogs.peek();
+        Cat c = cats.peek();
+        
+        if(d.isOlderThan(c)) return dogs.poll();
+        else return cats.poll();
+    }
+    
+    public Dog dequeueDog() {
+        return dogs.poll();
+    }
+    
+    public Cat dequeueCat() {
+        return cats.poll();
+    }
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
 
-	}
+    }
 
 }

@@ -8,18 +8,18 @@ identical.
  */
 
 public class _48 {
-	public boolean containsTree(TreeNode t1, TreeNode t2) {
-		if(t2 == null) return true;
-		if(t1 == null) return false;
-		if(matchTree(t1, t2)) return true;
-		return containsTree(t1.left, t2) || containsTree(t1.right, t2);
-	}
-	
-	private boolean matchTree(TreeNode t1, TreeNode t2) {
-		if(t1 == null && t2 == null) return true;
-		if(t1 == null || t2 == null) return false;
-		if(t1.val != t2.val) return false;
-		return matchTree(t1.left, t2.left) && matchTree(t1.right, t2.right);
-	}
-	
+    public boolean containsTree(TreeNode t1, TreeNode t2) {
+        if(t2 == null) return true;
+        if(t1 == null) return false;
+        if(matchTree(t1, t2)) return true;
+        return containsTree(t1.left, t2) || containsTree(t1.right, t2);
+    }
+    
+    private boolean matchTree(TreeNode t1, TreeNode t2) {
+        if(t1 == null && t2 == null) return true;
+        if(t1 == null || t2 == null) return false;
+        if(t1.val != t2.val) return false;
+        return matchTree(t1.left, t2.left) && matchTree(t1.right, t2.right);
+    }
+    
 }

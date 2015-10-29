@@ -6,8 +6,8 @@ package LinkedList;
  */
 
 public class _24 {
-	public ListNode partition(ListNode head, int x) {
-		if(head == null || head.next == null) return head;
+    public ListNode partition(ListNode head, int x) {
+        if(head == null || head.next == null) return head;
         
         ListNode fakehead = new ListNode(0);
         fakehead.next = head;
@@ -35,9 +35,9 @@ public class _24 {
         }
         
         return fakehead.next;
-	}
-	
-	public ListNode partition2(ListNode head, int x) {
+    }
+    
+    public ListNode partition2(ListNode head, int x) {
         if(head == null || head.next == null) return head;
         
         ListNode l1 = new ListNode(0);

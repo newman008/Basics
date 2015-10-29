@@ -6,17 +6,17 @@ package LinkedList;
  */
 
 public class _23 {
-	public void deleteNode(ListNode node) {
-		if(node == null) return;
-		
-		if(node.next == null) {
-			node = null;
-			return;
-		} else {
-			ListNode next = node.next;
-			node.val = next.val;
-			node.next = next.next;
-			return;
-		}
-	}
+    public void deleteNode(ListNode node) {
+        if(node == null) return;
+        
+        if(node.next == null) {
+            node = null;
+            return;
+        } else {
+            ListNode next = node.next;
+            node.val = next.val;
+            node.next = next.next;
+            return;
+        }
+    }
 }

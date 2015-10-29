@@ -9,35 +9,35 @@ import java.util.*;
  */
 
 public class _32 extends Stack<Integer>{
-	
-	Stack s;
-	public _32(){
-		s = new Stack<Integer>();
-	}
-	
-	public int min() {
-		if(s.isEmpty()) return Integer.MAX_VALUE;
-		else return (int) s.peek();
-	}
-	
-	public void push(int val) {
-		if(val <= min()) {
-			s.push(val);
-		}
-		super.push(val);
-	}
-	
-	public Integer pop() {
-		int val = super.pop();
-		if(val == min()){
-			s.pop();
-		}
-		return val;
-	}
+    
+    Stack s;
+    public _32(){
+        s = new Stack<Integer>();
+    }
+    
+    public int min() {
+        if(s.isEmpty()) return Integer.MAX_VALUE;
+        else return (int) s.peek();
+    }
+    
+    public void push(int val) {
+        if(val <= min()) {
+            s.push(val);
+        }
+        super.push(val);
+    }
+    
+    public Integer pop() {
+        int val = super.pop();
+        if(val == min()){
+            s.pop();
+        }
+        return val;
+    }
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
 
-	}
+    }
 
 }

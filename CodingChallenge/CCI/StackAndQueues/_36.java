@@ -10,23 +10,23 @@ import java.util.Stack;
  */
 
 public class _36 {
-	
-	public static Stack<Integer> sort(Stack<Integer> s) {
-		Stack<Integer> r = new Stack<Integer>();
-		while(!s.isEmpty()){
-			int tmp = s.pop();
-			while(!r.isEmpty() && tmp < r.peek()){
-				s.push(r.pop());
-			}
-			r.push(tmp);
-		}
-		
-		return r;
-	}
+    
+    public static Stack<Integer> sort(Stack<Integer> s) {
+        Stack<Integer> r = new Stack<Integer>();
+        while(!s.isEmpty()){
+            int tmp = s.pop();
+            while(!r.isEmpty() && tmp < r.peek()){
+                s.push(r.pop());
+            }
+            r.push(tmp);
+        }
+        
+        return r;
+    }
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
 
-	}
+    }
 
 }
