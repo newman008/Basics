@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.Map;
 
 public class _30_SubStringWithConcatenationOfAllWords {
-	public List<Integer> findSubstring2(String s, String[] words) {
+    public List<Integer> findSubstring2(String s, String[] words) {
         List<Integer> res = new ArrayList<Integer>();
         int numOfWords = words.length;
         int lenOfWord = words[0].length();
@@ -34,8 +34,8 @@ public class _30_SubStringWithConcatenationOfAllWords {
         
         return res;
     }
-	
-	public List<Integer> findSubstring(String s, String[] words) {
+    
+    public List<Integer> findSubstring(String s, String[] words) {
         List<Integer> res = new ArrayList<Integer>();
         if(s == null || s.length() == 0 || words == null || words.length == 0) return res;
         
@@ -98,12 +98,12 @@ public class _30_SubStringWithConcatenationOfAllWords {
         
         return res;
     }
-	
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		_30_SubStringWithConcatenationOfAllWords t = new _30_SubStringWithConcatenationOfAllWords();
-		String s = "cbaccbcbbc";
-		String[] words = {"cb","bc"};
-		t.findSubstring(s, words);
-	}
+    
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+        _30_SubStringWithConcatenationOfAllWords t = new _30_SubStringWithConcatenationOfAllWords();
+        String s = "cbaccbcbbc";
+        String[] words = {"cb","bc"};
+        t.findSubstring(s, words);
+    }
 }

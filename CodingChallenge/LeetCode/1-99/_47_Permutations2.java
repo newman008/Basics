@@ -5,7 +5,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public class _47_Permutations2 {
-	public List<List<Integer>> permuteUnique(int[] nums) {
+    public List<List<Integer>> permuteUnique(int[] nums) {
         Arrays.sort(nums);
         List<List<Integer>> results = new ArrayList<List<Integer>>();
         List<Integer> result = new ArrayList<Integer>();

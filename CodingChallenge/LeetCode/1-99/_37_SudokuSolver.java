@@ -1,7 +1,7 @@
 package LeetCode2;
 
 public class _37_SudokuSolver {
-	public void solveSudoku(char[][] board) {
+    public void solveSudoku(char[][] board) {
         backtrack(board, 0, 0);
     }
     
@@ -26,17 +26,17 @@ public class _37_SudokuSolver {
     
     private boolean isValid(char[][] board, int i, int j, char c) {
         for(int row = 0; row < 9; row++) {
-			if(board[row][j] == c) return false;
-		}
-		for(int col = 0; col < 9; col++) {
-			if(board[i][col] == c) return false;
-		}
-		for(int row = (i / 3) * 3; row < (i / 3) * 3 + 3; row++) {
-			for(int col = (j / 3) * 3; col < (j / 3) * 3 + 3; col++) {
-				if(board[row][col] == c) return false;
-			}
-		}
-		
-		return true;
+            if(board[row][j] == c) return false;
+        }
+        for(int col = 0; col < 9; col++) {
+            if(board[i][col] == c) return false;
+        }
+        for(int row = (i / 3) * 3; row < (i / 3) * 3 + 3; row++) {
+            for(int col = (j / 3) * 3; col < (j / 3) * 3 + 3; col++) {
+                if(board[row][col] == c) return false;
+            }
+        }
+        
+        return true;
     }
 }

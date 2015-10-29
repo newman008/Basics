@@ -1,7 +1,7 @@
 package LeetCode2;
 
 public class _41_FindMissingPositive {
-	public int firstMissingPositive(int[] nums) {
+    public int firstMissingPositive(int[] nums) {
         int n = nums.length;
         for(int i = 0; i < n; i++) {
             if(nums[i] > 0 && nums[i] < n && nums[i] != nums[nums[i] - 1]) {

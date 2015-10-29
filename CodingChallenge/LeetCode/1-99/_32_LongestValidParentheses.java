@@ -3,7 +3,7 @@ package LeetCode2;
 import java.util.Stack;
 
 public class _32_LongestValidParentheses {
-	public int longestValidParentheses(String s) {
+    public int longestValidParentheses(String s) {
         int len = s.length();
         int longest = 0;
         Stack<Integer> stack = new Stack<Integer>();

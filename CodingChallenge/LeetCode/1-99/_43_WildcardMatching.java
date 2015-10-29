@@ -1,7 +1,7 @@
 package LeetCode2;
 
 public class _43_WildcardMatching {
-	public boolean isMatch(String s, String p) {
+    public boolean isMatch(String s, String p) {
         int si = 0;
         int pi = 0;
         int start = -1;

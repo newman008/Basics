@@ -1,7 +1,7 @@
 package LeetCode2;
 
 public class _33_SearchInRotatedSortedArray {
-	public int search(int[] nums, int target) {
+    public int search(int[] nums, int target) {
         int lo = 0;
         int hi = nums.length - 1;
         

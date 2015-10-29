@@ -5,7 +5,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public class _40_CombinationSum {
-	public List<List<Integer>> combinationSum2(int[] candidates, int target) {
+    public List<List<Integer>> combinationSum2(int[] candidates, int target) {
         Arrays.sort(candidates);
         List<List<Integer>> results = new ArrayList<List<Integer>>();
         List<Integer> result = new ArrayList<Integer>();

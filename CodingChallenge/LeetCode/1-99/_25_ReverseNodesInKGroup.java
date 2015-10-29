@@ -3,13 +3,13 @@ package LeetCode2;
 import LeetCode2._24_SwapNodesInPairs.ListNode;
 
 public class _25_ReverseNodesInKGroup {
-	
-	public class ListNode {
-	     int val;
-	     ListNode next;
-	     ListNode(int x) { val = x; }
-	}
-	public ListNode reverseKGroup(ListNode head, int k) {
+    
+    public class ListNode {
+         int val;
+         ListNode next;
+         ListNode(int x) { val = x; }
+    }
+    public ListNode reverseKGroup(ListNode head, int k) {
         if(head == null || head.next == null) return head;
         
         ListNode cur = head;

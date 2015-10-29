@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class _46_Permutations {
-	public List<List<Integer>> permute(int[] nums) {
+    public List<List<Integer>> permute(int[] nums) {
         List<List<Integer>> results = new ArrayList<List<Integer>>();
         List<Integer> result = new ArrayList<Integer>();
         boolean[] visited = new boolean[nums.length];

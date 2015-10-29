@@ -3,7 +3,7 @@ package LeetCode2;
 import java.util.Arrays;
 
 public class _31_NextPermutation {
-	public void nextPermutation(int[] nums) {
+    public void nextPermutation(int[] nums) {
         if(nums == null || nums.length == 0 || nums.length == 1) return;
         int len = nums.length;
         boolean flag = true;

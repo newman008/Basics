@@ -1,7 +1,7 @@
 package LeetCode2;
 
 public class _35_SearchInsertPosition {
-	public int searchInsert(int[] nums, int target) {
+    public int searchInsert(int[] nums, int target) {
         int lo = 0;
         int hi = nums.length - 1;
         

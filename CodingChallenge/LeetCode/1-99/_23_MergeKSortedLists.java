@@ -2,15 +2,14 @@ package LeetCode2;
 
 import java.util.Arrays;
 
-
 public class _23_MergeKSortedLists {
-	public class ListNode {
-	     int val;
-	     ListNode next;
-	     ListNode(int x) { val = x; }
-	}
-	
-	public ListNode mergeKLists(ListNode[] lists) {
+    public class ListNode {
+         int val;
+         ListNode next;
+         ListNode(int x) { val = x; }
+    }
+    
+    public ListNode mergeKLists(ListNode[] lists) {
         if(lists.length == 0) return null;
         if(lists.length == 1) return lists[0];
         if(lists.length == 2) return mergeTwoLists(lists[0], lists[1]);

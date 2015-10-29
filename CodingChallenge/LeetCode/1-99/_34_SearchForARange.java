@@ -1,7 +1,7 @@
 package LeetCode2;
 
 public class _34_SearchForARange {
-	public int[] searchRange(int[] nums, int target) {
+    public int[] searchRange(int[] nums, int target) {
         int lo = 0;
         int hi = nums.length - 1;
         int[] res = {-1, -1};

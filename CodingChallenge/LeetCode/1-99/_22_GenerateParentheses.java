@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class _22_GenerateParentheses {
-	public List<String> generateParenthesis(int n) {
+    public List<String> generateParenthesis(int n) {
         List<List<String>> results = new ArrayList<List<String>>();
         if(n == 0) return null;
         List<String> result0 = new ArrayList<String>();

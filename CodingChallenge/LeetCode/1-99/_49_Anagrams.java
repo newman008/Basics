@@ -6,7 +6,7 @@ import java.util.HashMap;
 import java.util.List;
 
 public class _49_Anagrams {
-	public List<String> anagrams(String[] strs) {
+    public List<String> anagrams(String[] strs) {
         List<String> res = new ArrayList<String>();
         HashMap<String, Integer> map = new HashMap<String, Integer>();
         

@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 public class _36_ValidSudoku {
-	public boolean isValidSudoku(char[][] board) {
+    public boolean isValidSudoku(char[][] board) {
         ArrayList<HashMap<Integer, Integer>> rows = new ArrayList<HashMap<Integer, Integer>>();
         ArrayList<HashMap<Integer, Integer>> cols = new ArrayList<HashMap<Integer, Integer>>();
         ArrayList<HashMap<Integer, Integer>> groups = new ArrayList<HashMap<Integer, Integer>>();

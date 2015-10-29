@@ -1,7 +1,7 @@
 package LeetCode2;
 
 public class _44_MultiplyStrings {
-	public String multiply(String num1, String num2) {
+    public String multiply(String num1, String num2) {
         String n1 = new StringBuffer(num1).reverse().toString();
         String n2 = new StringBuffer(num2).reverse().toString();
         

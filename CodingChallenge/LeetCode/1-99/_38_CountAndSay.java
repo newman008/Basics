@@ -1,7 +1,7 @@
 package LeetCode2;
 
 public class _38_CountAndSay {
-	public String countAndSay(int n) {
+    public String countAndSay(int n) {
         if(n == 0) return null;
         String result = "1";
         
