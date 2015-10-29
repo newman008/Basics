@@ -1,7 +1,7 @@
 package LeetCode2;
 
 public class _65_ValidNumber {
-	public boolean isNumber(String s) {
+    public boolean isNumber(String s) {
         s = s.trim();
         if(s.length() == 0) return false;
         

@@ -1,7 +1,7 @@
 package LeetCode2;
 
 public class _63_UniquePaths2 {
-	public int uniquePathsWithObstacles(int[][] obstacleGrid) {
+    public int uniquePathsWithObstacles(int[][] obstacleGrid) {
         int m = obstacleGrid.length;
         int n = obstacleGrid[0].length;
         

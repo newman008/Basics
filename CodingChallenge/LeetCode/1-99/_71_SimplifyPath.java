@@ -6,7 +6,7 @@ import java.util.LinkedList;
 import java.util.Set;
 
 public class _71_SimplifyPath {
-	public String simplifyPath(String path) {
+    public String simplifyPath(String path) {
         // ".."     pop
         // "."      skip
         // "other"  push
@@ -24,10 +24,10 @@ public class _71_SimplifyPath {
         }
         
         String res = "";
-		for (String dir : stack) {
-		    res = "/" + dir + res;
-		}
-		
-		return res.isEmpty() ? "/" : res;
+        for (String dir : stack) {
+            res = "/" + dir + res;
+        }
+        
+        return res.isEmpty() ? "/" : res;
     }
 }

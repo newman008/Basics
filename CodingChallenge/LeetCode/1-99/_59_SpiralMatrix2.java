@@ -1,7 +1,7 @@
 package LeetCode2;
 
 public class _59_SpiralMatrix2 {
-	public int[][] generateMatrix(int n) {
+    public int[][] generateMatrix(int n) {
         int[][] matrix = new int[n][n];
         
         int rowStart = 0;

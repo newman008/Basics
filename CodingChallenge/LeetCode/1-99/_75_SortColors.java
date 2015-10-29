@@ -1,7 +1,7 @@
 package LeetCode2;
 
 public class _75_SortColors {
-	public void sortColors(int[] nums) {
+    public void sortColors(int[] nums) {
         // Two pointers
         int j = 0;
         int k = nums.length - 1;
@@ -26,8 +26,8 @@ public class _75_SortColors {
     }
     
     public static void main(String[] args) {
-		// TODO Auto-generated method stub
-    		int[] nums = {2,2};
-//    		_75_SortColors.sortColors(nums);
-	}
+        // TODO Auto-generated method stub
+            int[] nums = {2,2};
+//          _75_SortColors.sortColors(nums);
+    }
 }

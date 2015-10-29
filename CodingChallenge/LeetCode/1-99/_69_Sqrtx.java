@@ -1,7 +1,7 @@
 package LeetCode2;
 
 public class _69_Sqrtx {
-	public int mySqrt(int x) {
+    public int mySqrt(int x) {
         if(x == 0 || x == 1) return x;
         
         int l = 0;

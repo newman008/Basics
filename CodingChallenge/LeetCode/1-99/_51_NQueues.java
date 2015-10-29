@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class _51_NQueues {
-	public List<String[]> solveNQueens(int n) {
+    public List<String[]> solveNQueens(int n) {
         List<String[]> res = new ArrayList<String[]>();
         //if(n < 4) return res;
         

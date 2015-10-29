@@ -1,7 +1,7 @@
 package LeetCode2;
 
 public class _53_MaximumSubarray {
-	public static int maxSubArray(int[] nums) {
+    public static int maxSubArray(int[] nums) {
         int max = nums[0];
         int cur = nums[0];
         
@@ -16,12 +16,12 @@ public class _53_MaximumSubarray {
         
         return max;
     }
-	
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		_53_MaximumSubarray t = new _53_MaximumSubarray();
-		int[] nums = {-2, -3, -4, -5, -6};
-		System.out.println(t.maxSubArray(nums));
-	}
-	
+    
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+        _53_MaximumSubarray t = new _53_MaximumSubarray();
+        int[] nums = {-2, -3, -4, -5, -6};
+        System.out.println(t.maxSubArray(nums));
+    }
+    
 }

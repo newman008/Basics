@@ -1,7 +1,7 @@
 package LeetCode2;
 
 public class _66_PlusOne {
-	public int[] plusOne(int[] digits) {
+    public int[] plusOne(int[] digits) {
         int l = digits.length;
         digits[l-1] += 1;
         int i = l-1;

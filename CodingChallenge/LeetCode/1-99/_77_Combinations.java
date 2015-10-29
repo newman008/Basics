@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class _77_Combinations {
-	public List<List<Integer>> combine(int n, int k) {
+    public List<List<Integer>> combine(int n, int k) {
         List<List<Integer>> results = new ArrayList<List<Integer>>();
         List<Integer> res = new ArrayList<Integer>();
         backtrack(results, res, 1, n, k);

@@ -5,7 +5,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public class _78_Subsets {
-	public List<List<Integer>> subsets(int[] nums) {
+    public List<List<Integer>> subsets(int[] nums) {
         List<List<Integer>> results = new ArrayList<List<Integer>>();
         List<Integer> res = new ArrayList<Integer>();
         Arrays.sort(nums);
@@ -34,20 +34,20 @@ public class _78_Subsets {
         
         
         for(int i = 0; i < (2 << nums.length); i++) {
-        	List<Integer> subset = new ArrayList<Integer>();
-        	for(int j = 0; j < nums.length; j++) {
-        		if(((i >> j) & 1) != 0) subset.add(nums[j]);
-        	}
-        	res.add(subset);
+            List<Integer> subset = new ArrayList<Integer>();
+            for(int j = 0; j < nums.length; j++) {
+                if(((i >> j) & 1) != 0) subset.add(nums[j]);
+            }
+            res.add(subset);
         }
 
         return res;
     }
     
     public static void main(String[] args) {
-		// TODO Auto-generated method stub
-    		int[] nums = {0};
-    		_78_Subsets t = new _78_Subsets();
-    		t.subsets2(nums);
-	}
+        // TODO Auto-generated method stub
+            int[] nums = {0};
+            _78_Subsets t = new _78_Subsets();
+            t.subsets2(nums);
+    }
 }

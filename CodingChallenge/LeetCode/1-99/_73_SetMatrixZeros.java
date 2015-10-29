@@ -1,7 +1,7 @@
 package LeetCode2;
 
 public class _73_SetMatrixZeros {
-	public void setZeroes(int[][] matrix) {
+    public void setZeroes(int[][] matrix) {
         int m = matrix.length;
         int n = matrix[0].length;
         
@@ -34,11 +34,11 @@ public class _73_SetMatrixZeros {
         }
         
         if(firstRowHasZero)
-			for(int j = 0; j < n; j++)
-				matrix[0][j] = 0;
-		
-		if(firstColHasZero)
-			for(int i = 0; i < m; i++)
-				matrix[i][0] = 0;
+            for(int j = 0; j < n; j++)
+                matrix[0][j] = 0;
+        
+        if(firstColHasZero)
+            for(int i = 0; i < m; i++)
+                matrix[i][0] = 0;
     }
 }

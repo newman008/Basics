@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class _68_TextJustification {
-	public List<String> fullJustify(String[] words, int maxWidth) {
+    public List<String> fullJustify(String[] words, int maxWidth) {
         List<String> res = new ArrayList<String>();
         int covered = 0;
         int last = 0;
@@ -48,13 +48,13 @@ public class _68_TextJustification {
         StringBuilder lastline = new StringBuilder();  
         for(int i=last;i<words.length;i++)  
         {  
-        		lastline.append(words[i]);  
+                lastline.append(words[i]);  
             if(lastline.length() < maxWidth)  
-            		lastline.append(" ");  
+                    lastline.append(" ");  
         }  
         for(int i=lastline.length();i < maxWidth;i++)  
         {  
-        		lastline.append(" ");  
+                lastline.append(" ");  
         } 
         res.add(lastline.toString());
         return res;

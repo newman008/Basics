@@ -1,7 +1,7 @@
 package LeetCode2;
 
 public class _67_AddBinary {
-	public String addBinary(String a, String b) {
+    public String addBinary(String a, String b) {
         StringBuffer res = new StringBuffer();
         int carry = 0;
         int acur = 0;

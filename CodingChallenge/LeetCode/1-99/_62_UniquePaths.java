@@ -1,7 +1,7 @@
 package LeetCode2;
 
 public class _62_UniquePaths {
-	public int uniquePaths(int m, int n) {
+    public int uniquePaths(int m, int n) {
         int[][] matrix = new int[m][n];
         for(int j = 0; j < n; j++) {
             matrix[0][j] = 1;

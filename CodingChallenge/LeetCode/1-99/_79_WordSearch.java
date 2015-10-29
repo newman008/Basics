@@ -1,7 +1,7 @@
 package LeetCode2;
 
 public class _79_WordSearch {
-	public boolean exist(char[][] board, String word) {
+    public boolean exist(char[][] board, String word) {
         // write your code here
         int m = board.length;
         int n = board[0].length;

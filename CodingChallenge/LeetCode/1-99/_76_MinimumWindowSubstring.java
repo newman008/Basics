@@ -3,7 +3,7 @@ package LeetCode2;
 import java.util.HashMap;
 
 public class _76_MinimumWindowSubstring {
-	public String minWindow(String s, String t) {
+    public String minWindow(String s, String t) {
         int minLen = s.length();
         int minStart = 0;
         int minEnd = s.length() - 1;
@@ -42,10 +42,10 @@ public class _76_MinimumWindowSubstring {
         if(count != 0) return "";
         return s.substring(minStart, minEnd+1);
     }
-	
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		_76_MinimumWindowSubstring t = new _76_MinimumWindowSubstring();
-		t.minWindow("bba", "ab");
-	}
+    
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+        _76_MinimumWindowSubstring t = new _76_MinimumWindowSubstring();
+        t.minWindow("bba", "ab");
+    }
 }
