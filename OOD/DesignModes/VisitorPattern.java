@@ -1,8 +1,8 @@
 package designModes;
 
 interface Element {
-	   // 1. accept(Visitor) interface
-	   public void accept( Visitor v ); // first dispatch
+       // 1. accept(Visitor) interface
+       public void accept( Visitor v ); // first dispatch
 }
 
 class This implements Element {
@@ -16,7 +16,7 @@ class This implements Element {
 }
 
 class That implements Element {
-	
+    
    public void   accept( Visitor v ) {
      v.visit( this );
    }
@@ -47,22 +47,22 @@ class DownVisitor implements Visitor {
       System.out.println( "do Down on " + e.that() );
    }
 }
-	
+    
 public class VisitorPattern {
-	
-	public static Element[] list = { new This(), new That()};
-	
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		UpVisitor    up   = new UpVisitor();
-		DownVisitor  down = new DownVisitor();
-		for (int i=0; i < list.length; i++) {
-		   list[i].accept( up );
-		}
-		for (int i=0; i < list.length; i++) {
-		   list[i].accept( down );
-		}
+    
+    public static Element[] list = { new This(), new That()};
+    
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+        UpVisitor    up   = new UpVisitor();
+        DownVisitor  down = new DownVisitor();
+        for (int i=0; i < list.length; i++) {
+           list[i].accept( up );
+        }
+        for (int i=0; i < list.length; i++) {
+           list[i].accept( down );
+        }
 
-	}
+    }
 
 }

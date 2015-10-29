@@ -1,6 +1,6 @@
 package JigsawPuzzle;
 
 public class Piece {
-	Edge[] edges;
-	boolean isCorner;
+    Edge[] edges;
+    boolean isCorner;
 }

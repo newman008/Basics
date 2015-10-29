@@ -2,24 +2,24 @@ package designModes;
 
 // Product
 class Pizza {
-	private String dough = "";
-	private String sauce = "";
-	private String topping = "";
+    private String dough = "";
+    private String sauce = "";
+    private String topping = "";
 
-	public void setDough(String dough)     { this.dough = dough; }
-	public void setSauce(String sauce)     { this.sauce = sauce; }
-	public void setTopping(String topping) { this.topping = topping; }
+    public void setDough(String dough)     { this.dough = dough; }
+    public void setSauce(String sauce)     { this.sauce = sauce; }
+    public void setTopping(String topping) { this.topping = topping; }
 }
 
 // Abstract Builder
 abstract class PizzaBuilder {
-	protected Pizza pizza;
-	public Pizza getPizza() {return pizza;}
-	public void createNewPizzaProduct() { pizza = new Pizza(); }
+    protected Pizza pizza;
+    public Pizza getPizza() {return pizza;}
+    public void createNewPizzaProduct() { pizza = new Pizza(); }
 
-	public abstract void buildDough();
-	public abstract void buildSauce();
-	public abstract void buildTopping();
+    public abstract void buildDough();
+    public abstract void buildSauce();
+    public abstract void buildTopping();
 }
 
 /* "ConcreteBuilder" */
@@ -53,15 +53,15 @@ class Waiter {
 
 public class Builder {
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		Waiter waiter = new Waiter(); // create Director
-		PizzaBuilder hawaiian_pizzabuilder = new HawaiianPizzaBuilder(); // create ConcreteBuilder
-		
-		waiter.setPizzaBuilder(hawaiian_pizzabuilder);
-		waiter.constructPizza();
-		
-		Pizza pizza = waiter.getPizza();
-	}
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+        Waiter waiter = new Waiter(); // create Director
+        PizzaBuilder hawaiian_pizzabuilder = new HawaiianPizzaBuilder(); // create ConcreteBuilder
+        
+        waiter.setPizzaBuilder(hawaiian_pizzabuilder);
+        waiter.constructPizza();
+        
+        Pizza pizza = waiter.getPizza();
+    }
 
 }

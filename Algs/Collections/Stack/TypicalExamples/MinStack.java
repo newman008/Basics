@@ -10,25 +10,25 @@
 public class MinStack {
     
     private class Node {
-		int val;
-		int min;
-		Node next;
-		public Node(int x){
-			val = x;
-		} 
-	}
+        int val;
+        int min;
+        Node next;
+        public Node(int x){
+            val = x;
+        } 
+    }
     
-	Node first = null;
+    Node first = null;
 
     public void push(int x) {
         if(first == null) {
-        	first = new Node(x);
-        	first.min = x;
+            first = new Node(x);
+            first.min = x;
         } else {
-        	Node node = new Node(x);
-        	node.next = first;
-        	node.min = Math.min(x, first.min);
-        	first = node;
+            Node node = new Node(x);
+            node.next = first;
+            node.min = Math.min(x, first.min);
+            first = node;
         }
     }
 

@@ -1,13 +1,13 @@
 package Elevator;
 
 public class Request {
-	private int toFloor;
-	
-	public Request(int toFloor){
-		this.toFloor = toFloor;
-	}
-	
-	public int getToFloor(){
-		return toFloor;
-	}
+    private int toFloor;
+    
+    public Request(int toFloor){
+        this.toFloor = toFloor;
+    }
+    
+    public int getToFloor(){
+        return toFloor;
+    }
 }

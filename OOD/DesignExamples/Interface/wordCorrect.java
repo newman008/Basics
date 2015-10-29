@@ -1,6 +1,6 @@
 package Interface;
 
 public interface wordCorrect {
-	boolean isCorrect(String s);
-	String alternativeWord(String s);
+    boolean isCorrect(String s);
+    String alternativeWord(String s);
 }
