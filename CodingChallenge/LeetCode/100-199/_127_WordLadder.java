@@ -7,7 +7,7 @@ import java.util.Queue;
 import java.util.Set;
 
 public class _127_WordLadder {
-	public int ladderLength(String beginWord, String endWord, Set<String> wordDict) {
+    public int ladderLength(String beginWord, String endWord, Set<String> wordDict) {
         Map<String, Integer> map = new HashMap<String, Integer>();
         Queue<String> q = new LinkedList<String>();
         map.put(beginWord, 1);

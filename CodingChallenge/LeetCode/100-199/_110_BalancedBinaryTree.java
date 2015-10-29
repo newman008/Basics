@@ -1,13 +1,13 @@
 package LeetCode2;
 
 public class _110_BalancedBinaryTree {
-	public class TreeNode {
-	    int val;
-	 	TreeNode left;
-	 	TreeNode right;
-	 	TreeNode(int x) { val = x; }
-	}
-	public boolean isBalanced(TreeNode root) {
+    public class TreeNode {
+        int val;
+        TreeNode left;
+        TreeNode right;
+        TreeNode(int x) { val = x; }
+    }
+    public boolean isBalanced(TreeNode root) {
         if(root == null) return true;
         int depth = depth(root);
         if(depth == -1) return false;

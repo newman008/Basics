@@ -1,7 +1,7 @@
 package LeetCode2;
 
 public class _164_MaximumGap {
-	class Bucket {
+    class Bucket {
         int low;
         int high;
         public Bucket() {
@@ -51,9 +51,9 @@ public class _164_MaximumGap {
     }
     
     public static void main(String[] args) {
-		// TODO Auto-generated method stub
-    		_164_MaximumGap t = new _164_MaximumGap();
-    		int[] nums = {6,3,5,4,15};
-		System.out.print(t.maximumGap(nums));
-	}
+        // TODO Auto-generated method stub
+            _164_MaximumGap t = new _164_MaximumGap();
+            int[] nums = {6,3,5,4,15};
+        System.out.print(t.maximumGap(nums));
+    }
 }

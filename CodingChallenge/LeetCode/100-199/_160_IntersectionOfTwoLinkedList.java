@@ -1,15 +1,15 @@
 package LeetCode2;
 
 public class _160_IntersectionOfTwoLinkedList {
-	public class ListNode {
-			int val;
-		 	ListNode next;
-		 	ListNode(int x) {
-	        val = x;
-		 	next = null;
-	 	}
- 	}
-	public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
+    public class ListNode {
+            int val;
+            ListNode next;
+            ListNode(int x) {
+            val = x;
+            next = null;
+        }
+    }
+    public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
         if(headA == null || headB == null) return null;
         ListNode p1 = headA;
         ListNode p2 = headB;

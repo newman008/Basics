@@ -7,7 +7,7 @@ import java.util.Stack;
 import LeetCode2._100_SameTree.TreeNode;
 
 public class _144_BTPreorderTraversal {
-	public List<Integer> preorderTraversal(TreeNode root) {
+    public List<Integer> preorderTraversal(TreeNode root) {
         List<Integer> res = new ArrayList<Integer>();
         if(root == null) return res;
         

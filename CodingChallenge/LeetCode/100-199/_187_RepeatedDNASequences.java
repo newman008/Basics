@@ -7,16 +7,16 @@ import java.util.List;
 import java.util.Map;
 
 public class _187_RepeatedDNASequences {
-	public List<String> findRepeatedDnaSequences(String s) {
+    public List<String> findRepeatedDnaSequences(String s) {
         List<String> res = new LinkedList<String>();
         HashSet<Integer> set = new HashSet<Integer>();
         HashSet<Integer> repeated = new HashSet<Integer>();
         
         Map<Character, Integer> map = new HashMap<Character, Integer>();
-	    map.put('A', 0);
-	    map.put('C', 1);
-	    map.put('G', 2);
-	    map.put('T', 3);
+        map.put('A', 0);
+        map.put('C', 1);
+        map.put('G', 2);
+        map.put('T', 3);
         
         for(int i = 0; i < s.length() - 9; i++) {
             int v = 0;

@@ -6,13 +6,13 @@ import java.util.List;
 import java.util.Stack;
 
 public class _103_BinaryTreeZigZagLevelOrderTraversal {
-	public class TreeNode {
-	    int val;
-	 	TreeNode left;
-	 	TreeNode right;
-	 	TreeNode(int x) { val = x; }
-	}
-	public List<List<Integer>> zigzagLevelOrder(TreeNode root) {
+    public class TreeNode {
+        int val;
+        TreeNode left;
+        TreeNode right;
+        TreeNode(int x) { val = x; }
+    }
+    public List<List<Integer>> zigzagLevelOrder(TreeNode root) {
         List<List<Integer>> results = new ArrayList<List<Integer>>();
         if(root == null) return results;
         

@@ -1,12 +1,12 @@
 package LeetCode2;
 
 public class _116_PopulatingNextRightPointer {
-	public class TreeLinkNode {
-		int val;
-		TreeLinkNode left, right, next;
-		TreeLinkNode(int x) { val = x; }
-	}
-	public void connect(TreeLinkNode root) {
+    public class TreeLinkNode {
+        int val;
+        TreeLinkNode left, right, next;
+        TreeLinkNode(int x) { val = x; }
+    }
+    public void connect(TreeLinkNode root) {
         if(root == null) return;
         TreeLinkNode start = root;
         TreeLinkNode cur = null;

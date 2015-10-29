@@ -3,7 +3,7 @@ package LeetCode2;
 import java.util.Stack;
 
 public class _151_ReverseWordsInString {
-	public String reverseWords(String s) {
+    public String reverseWords(String s) {
         String[] tokens = s.split(" ");
         int l = tokens.length;
         Stack<String> stack = new Stack<String>();

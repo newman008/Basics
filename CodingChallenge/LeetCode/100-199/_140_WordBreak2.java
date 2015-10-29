@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.Set;
 
 public class _140_WordBreak2 {
-	public List<String> wordBreak(String s, Set<String> wordDict) {
+    public List<String> wordBreak(String s, Set<String> wordDict) {
         List<String> res = new ArrayList<String>();
         StringBuilder sb = new StringBuilder();
         
@@ -14,10 +14,10 @@ public class _140_WordBreak2 {
         canDivide[0] = true;
         
         for(int i = 1; i <= len; i++) {
-        		for(int j = 0; j < i; j++) {
-        			if(canDivide[j] && wordDict.contains(s.subSequence(j, i)))
-        				canDivide[i] = true;
-        		}
+                for(int j = 0; j < i; j++) {
+                    if(canDivide[j] && wordDict.contains(s.subSequence(j, i)))
+                        canDivide[i] = true;
+                }
         }
         
         if(!canDivide[len]) return res; 

@@ -1,7 +1,7 @@
 package LeetCode2;
 
 public class _162_FindPeakElement {
-	public int findPeakElement(int[] nums) {
+    public int findPeakElement(int[] nums) {
         return findPeak(nums, 0, nums.length-1);
     }
     

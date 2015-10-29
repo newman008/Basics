@@ -1,15 +1,15 @@
 package LeetCode2;
 
 public class _143_ReorderList {
-	class ListNode {
-	     int val;
-	     ListNode next;
-	     ListNode(int x) {
-	         val = x;
-	         next = null;
-	     }
-	}
-	public void reorderList(ListNode head) {
+    class ListNode {
+         int val;
+         ListNode next;
+         ListNode(int x) {
+             val = x;
+             next = null;
+         }
+    }
+    public void reorderList(ListNode head) {
         if(head == null || head.next == null) return;
         
         // find the middle
@@ -39,11 +39,11 @@ public class _143_ReorderList {
             ListNode temp1 = p1.next;
             ListNode temp2 = p2.next;
 
-			p1.next = p2;
-			p2.next = temp1;		
+            p1.next = p2;
+            p2.next = temp1;        
 
-			p1 = temp1;
-			p2 = temp2;
+            p1 = temp1;
+            p2 = temp2;
         }
     }
 }

@@ -1,13 +1,13 @@
 package LeetCode2;
 
 public class _129_SumRootToLeafNumbers {
-	public class TreeNode {
-		int val;
-		TreeNode left;
- 		TreeNode right;
-		TreeNode(int x) { val = x; }
- 	}
-	public int sumNumbers(TreeNode root) {
+    public class TreeNode {
+        int val;
+        TreeNode left;
+        TreeNode right;
+        TreeNode(int x) { val = x; }
+    }
+    public int sumNumbers(TreeNode root) {
         if(root == null) return 0;
         return dfs(root, 0);
     }

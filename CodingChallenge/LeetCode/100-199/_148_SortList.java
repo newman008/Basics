@@ -1,14 +1,14 @@
 package LeetCode2;
 
 public class _148_SortList {
-	
-	public class ListNode {
-		int val;
-		ListNode next;
-	 	ListNode(int x) { val = x; }
-	}
-	
-	public ListNode sortList(ListNode head) {
+    
+    public class ListNode {
+        int val;
+        ListNode next;
+        ListNode(int x) { val = x; }
+    }
+    
+    public ListNode sortList(ListNode head) {
         return mergeSort(head);
     }
     

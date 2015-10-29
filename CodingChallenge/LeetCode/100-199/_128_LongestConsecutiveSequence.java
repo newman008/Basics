@@ -3,7 +3,7 @@ package LeetCode2;
 import java.util.HashMap;
 
 public class _128_LongestConsecutiveSequence {
-	public int longestConsecutive(int[] nums) {
+    public int longestConsecutive(int[] nums) {
         int max = 0;
         HashMap<Integer, Integer> map = new HashMap<Integer, Integer>();
         

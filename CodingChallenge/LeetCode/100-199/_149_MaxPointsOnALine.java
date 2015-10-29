@@ -4,14 +4,14 @@ import java.util.Map;
 import java.util.HashMap;
 
 public class _149_MaxPointsOnALine {
-	class Point {
-		int x;
-	 	int y;
-	 	Point() { x = 0; y = 0; }
-	 	Point(int a, int b) { x = a; y = b; }
-		}
-	
-	public int maxPoints(Point[] points) {
+    class Point {
+        int x;
+        int y;
+        Point() { x = 0; y = 0; }
+        Point(int a, int b) { x = a; y = b; }
+        }
+    
+    public int maxPoints(Point[] points) {
         if(points == null) return 0;
         int len = points.length;
         if(len <= 2) return len;

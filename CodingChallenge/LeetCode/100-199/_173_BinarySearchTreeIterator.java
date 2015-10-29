@@ -3,14 +3,14 @@ package LeetCode2;
 import java.util.Stack;
 
 public class _173_BinarySearchTreeIterator {
-	public class TreeNode {
-	     int val;
-	     TreeNode left;
-	     TreeNode right;
-		 TreeNode(int x) { val = x; }
-	 }
-	
-	Stack<TreeNode> s;
+    public class TreeNode {
+         int val;
+         TreeNode left;
+         TreeNode right;
+         TreeNode(int x) { val = x; }
+     }
+    
+    Stack<TreeNode> s;
 
     public _173_BinarySearchTreeIterator(TreeNode root) {
         s = new Stack<TreeNode>();

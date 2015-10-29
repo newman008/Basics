@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class _190_ReverseBits {
-	Map<Byte, Integer> cache = new HashMap<Byte, Integer>();
+    Map<Byte, Integer> cache = new HashMap<Byte, Integer>();
     
     // you need treat n as an unsigned value
     public int reverseBits2(int n) {
@@ -77,8 +77,8 @@ public class _190_ReverseBits {
     }
     
     public static void main(String[] args) {
-		// TODO Auto-generated method stub
-    		_190_ReverseBits t = new _190_ReverseBits();
-    		t.reverseBits(1);
-	}
+        // TODO Auto-generated method stub
+            _190_ReverseBits t = new _190_ReverseBits();
+            t.reverseBits(1);
+    }
 }

@@ -3,7 +3,7 @@ package LeetCode2;
 import java.util.HashMap;
 
 public class _146_LRUCache {
-	class DoubleLinkedListNode {
+    class DoubleLinkedListNode {
         int val;
         int key;
         DoubleLinkedListNode pre;

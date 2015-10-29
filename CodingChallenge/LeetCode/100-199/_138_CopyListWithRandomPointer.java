@@ -3,13 +3,13 @@ package LeetCode2;
 import java.util.HashMap;
 
 public class _138_CopyListWithRandomPointer {
-	class RandomListNode {
-	     int label;
-	     RandomListNode next, random;
-	     RandomListNode(int x) { this.label = x; }
-	};
-	
-	public RandomListNode copyRandomList(RandomListNode head) {
+    class RandomListNode {
+         int label;
+         RandomListNode next, random;
+         RandomListNode(int x) { this.label = x; }
+    };
+    
+    public RandomListNode copyRandomList(RandomListNode head) {
         if(head == null) return head;
         
         HashMap<RandomListNode, RandomListNode> map = new HashMap<RandomListNode, RandomListNode>();
@@ -37,8 +37,8 @@ public class _138_CopyListWithRandomPointer {
         
         return newHead;
     }
-	
-	public RandomListNode copyRandomList2(RandomListNode head) {
+    
+    public RandomListNode copyRandomList2(RandomListNode head) {
         if(head == null) return head;
         RandomListNode cur = head;
         

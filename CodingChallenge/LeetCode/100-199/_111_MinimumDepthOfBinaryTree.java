@@ -4,13 +4,13 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 public class _111_MinimumDepthOfBinaryTree {
-	public class TreeNode {
-	    int val;
-	 	TreeNode left;
-	 	TreeNode right;
-	 	TreeNode(int x) { val = x; }
-	}
-	public int minDepth(TreeNode root) {
+    public class TreeNode {
+        int val;
+        TreeNode left;
+        TreeNode right;
+        TreeNode(int x) { val = x; }
+    }
+    public int minDepth(TreeNode root) {
         if(root == null) return 0;
         if(root.left == null && root.right == null) return 1;
         if(root.left == null) return minDepth(root.right)+1;
@@ -20,8 +20,8 @@ public class _111_MinimumDepthOfBinaryTree {
         int right = minDepth(root.right);
         return left < right? left+1 : right+1;
     }
-	
-	public int minDepth2(TreeNode root) {
+    
+    public int minDepth2(TreeNode root) {
         // if(root == null) return 0;
         // if(root.left == null && root.right == null) return 1;
         // if(root.left == null) return minDepth(root.right)+1;

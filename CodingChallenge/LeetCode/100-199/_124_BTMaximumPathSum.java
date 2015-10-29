@@ -1,14 +1,14 @@
 package LeetCode2;
 
 public class _124_BTMaximumPathSum {
-	public class TreeNode {
-		int val;
-		TreeNode left;
- 		TreeNode right;
-		TreeNode(int x) { val = x; }
- 	}
-	
-	public int maxPathSum(TreeNode root) {
+    public class TreeNode {
+        int val;
+        TreeNode left;
+        TreeNode right;
+        TreeNode(int x) { val = x; }
+    }
+    
+    public int maxPathSum(TreeNode root) {
         int[] max = new int[1];
         max[0] = Integer.MIN_VALUE;
         findBranchSum(root, max);

@@ -1,7 +1,7 @@
 package LeetCode2;
 
 public class _165_CompareVersionNumbers {
-	public int compareVersion(String version1, String version2) {
+    public int compareVersion(String version1, String version2) {
         
         String[] v1 = version1.split("\\.");
         String[] v2 = version2.split("\\.");
@@ -16,11 +16,11 @@ public class _165_CompareVersionNumbers {
         
         return 0;
     }
-	
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		_165_CompareVersionNumbers t = new _165_CompareVersionNumbers();
-    		
-		System.out.print(t.compareVersion("01", "1"));
-	}
+    
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+        _165_CompareVersionNumbers t = new _165_CompareVersionNumbers();
+            
+        System.out.print(t.compareVersion("01", "1"));
+    }
 }

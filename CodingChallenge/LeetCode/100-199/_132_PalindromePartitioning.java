@@ -1,7 +1,7 @@
 package LeetCode2;
 
 public class _132_PalindromePartitioning {
-	public int minCut(String s) {
+    public int minCut(String s) {
         int l = s.length();
         boolean[][] matrix = new boolean[l][l];
         int[] cut = new int[l];

@@ -1,8 +1,8 @@
 package LeetCode2;
 
 public class _170_TwoSum2 {
-	
-	public int[] twoSum(int[] numbers, int target) {
+    
+    public int[] twoSum(int[] numbers, int target) {
         int[] res = new int[2];
         
         for(int i = 0; i < numbers.length - 1; i++) {
@@ -27,9 +27,9 @@ public class _170_TwoSum2 {
         return res;
     }
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
 
-	}
+    }
 
 }

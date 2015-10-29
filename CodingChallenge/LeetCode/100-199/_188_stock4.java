@@ -1,7 +1,7 @@
 package LeetCode2;
 
 public class _188_stock4 {
-	public int maxProfit(int k, int[] prices) {
+    public int maxProfit(int k, int[] prices) {
         if(prices.length == 0) return 0;
         if (k >= prices.length / 2) return quickSolve(prices);
         int[][] dp = new int[k+1][prices.length];
@@ -17,8 +17,8 @@ public class _188_stock4 {
         
         return dp[k][prices.length-1];
     }
-	
-	public int maxProfit2(int k, int[] prices) {
+    
+    public int maxProfit2(int k, int[] prices) {
         if(prices.length == 0) return 0;
         if (k >= prices.length / 2) return quickSolve(prices);
         int[][] global = new int[prices.length][k+1];

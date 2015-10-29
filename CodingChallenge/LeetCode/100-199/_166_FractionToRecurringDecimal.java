@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class _166_FractionToRecurringDecimal {
-	public String fractionToDecimal(int numerator, int denominator) {
+    public String fractionToDecimal(int numerator, int denominator) {
         if(numerator == 0) return "0";
         if(denominator == 0) return "";
         

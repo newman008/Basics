@@ -1,13 +1,13 @@
 package LeetCode2;
 
 public class _108_ConvertSortedArrayToBST {
-	public class TreeNode {
-	    int val;
-	 	TreeNode left;
-	 	TreeNode right;
-	 	TreeNode(int x) { val = x; }
-	}
-	public TreeNode sortedArrayToBST(int[] nums) {
+    public class TreeNode {
+        int val;
+        TreeNode left;
+        TreeNode right;
+        TreeNode(int x) { val = x; }
+    }
+    public TreeNode sortedArrayToBST(int[] nums) {
         return helper(0, nums.length - 1, nums);
     }
     

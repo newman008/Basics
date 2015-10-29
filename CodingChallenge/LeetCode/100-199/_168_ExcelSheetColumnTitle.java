@@ -1,7 +1,7 @@
 package LeetCode2;
 
 public class _168_ExcelSheetColumnTitle {
-	public String convertToTitle(int n) {
+    public String convertToTitle(int n) {
         String res = "";
         
         while(n > 0) {

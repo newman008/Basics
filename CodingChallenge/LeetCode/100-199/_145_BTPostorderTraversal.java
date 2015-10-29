@@ -7,7 +7,7 @@ import java.util.Stack;
 import LeetCode2._100_SameTree.TreeNode;
 
 public class _145_BTPostorderTraversal {
-	public List<Integer> postorderTraversal(TreeNode root) {
+    public List<Integer> postorderTraversal(TreeNode root) {
         List<Integer> res = new ArrayList<Integer>();
         if(root == null) return res;
         

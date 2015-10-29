@@ -1,13 +1,13 @@
 package LeetCode2;
 
 public class _155_MinStack {
-	private class Node{
+    private class Node{
         int num;
         int min;
         Node next;
     }
-	
-	private Node first = null;
+    
+    private Node first = null;
     
     public void push(int x) {
         if(first == null) {

@@ -1,7 +1,7 @@
 package LeetCode2;
 
 public class _154_FindMinimumRotatedSortedArray2 {
-	public int findMin(int[] nums) {
+    public int findMin(int[] nums) {
         int lo = 0;
         int hi = nums.length - 1;
         
@@ -23,8 +23,8 @@ public class _154_FindMinimumRotatedSortedArray2 {
         
         return Math.min(nums[lo], nums[hi]);
     }
-	
-	public int findMin2(int[] nums) {
+    
+    public int findMin2(int[] nums) {
         return findMin(nums, 0, nums.length-1);
     }
     

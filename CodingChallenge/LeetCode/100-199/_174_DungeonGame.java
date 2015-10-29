@@ -1,7 +1,7 @@
 package LeetCode2;
 
 public class _174_DungeonGame {
-	public int calculateMinimumHP(int[][] dungeon) {
+    public int calculateMinimumHP(int[][] dungeon) {
         int m = dungeon.length;
         int n = dungeon[0].length;
         

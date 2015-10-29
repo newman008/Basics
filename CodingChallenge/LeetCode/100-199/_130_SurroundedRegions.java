@@ -4,7 +4,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 public class _130_SurroundedRegions {
-	public void solve(char[][] board) {
+    public void solve(char[][] board) {
         if(board == null || board.length == 0) return;
         
         int m = board.length;

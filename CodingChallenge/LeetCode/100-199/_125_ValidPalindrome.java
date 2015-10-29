@@ -1,7 +1,7 @@
 package LeetCode2;
 
 public class _125_ValidPalindrome {
-	public boolean isPalindrome(String s) {
+    public boolean isPalindrome(String s) {
         if(s.length() == 0) return true;
         s = s.toLowerCase();
         s = s.replaceAll("[^a-z^0-9]", "");

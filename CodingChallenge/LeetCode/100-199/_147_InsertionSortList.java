@@ -1,13 +1,13 @@
 package LeetCode2;
 
 public class _147_InsertionSortList {
-	public class ListNode {
-		int val;
-		ListNode next;
-	 	ListNode(int x) { val = x; }
-	}
-	
-	public ListNode insertionSortList(ListNode head) {
+    public class ListNode {
+        int val;
+        ListNode next;
+        ListNode(int x) { val = x; }
+    }
+    
+    public ListNode insertionSortList(ListNode head) {
         if(head == null || head.next == null) return head;
         
         ListNode newHead = new ListNode(0);

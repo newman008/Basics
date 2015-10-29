@@ -1,7 +1,7 @@
 package LeetCode2;
 
 public class _134_GasStation {
-	public int canCompleteCircuit(int[] gas, int[] cost) {
+    public int canCompleteCircuit(int[] gas, int[] cost) {
         int j = -1;
         int sum = 0;
         int total = 0;

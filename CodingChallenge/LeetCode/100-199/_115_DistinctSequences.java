@@ -1,7 +1,7 @@
 package LeetCode2;
 
 public class _115_DistinctSequences {
-	public int numDistinct(String s, String t) {
+    public int numDistinct(String s, String t) {
         int row = s.length();
         int col = t.length();
         

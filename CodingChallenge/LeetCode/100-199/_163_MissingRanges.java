@@ -3,8 +3,8 @@ package LeetCode2;
 import java.util.*;
 
 public class _163_MissingRanges {
-	
-	public List<String> findMissingRanges(int[] nums, int lower, int upper) {
+    
+    public List<String> findMissingRanges(int[] nums, int lower, int upper) {
         List<String> res = new ArrayList<String>();
         
         int pre = lower - 1;
@@ -31,9 +31,9 @@ public class _163_MissingRanges {
         return res;
     }
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
 
-	}
+    }
 
 }

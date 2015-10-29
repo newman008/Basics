@@ -3,7 +3,7 @@ package LeetCode2;
 import java.util.Set;
 
 public class _139_WordBreak {
-	public boolean wordBreak(String s, Set<String> wordDict) {
+    public boolean wordBreak(String s, Set<String> wordDict) {
         int l = s.length();
         boolean[] dp = new boolean[l+1];
         dp[0] = true;
@@ -17,8 +17,8 @@ public class _139_WordBreak {
         
         return dp[l];
     }
-	
-	public boolean wordBreak2(String s, Set<String> wordDict) {
+    
+    public boolean wordBreak2(String s, Set<String> wordDict) {
         return helper(s, wordDict, 0);
     }
     

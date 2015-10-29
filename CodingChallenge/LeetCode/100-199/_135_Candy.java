@@ -1,7 +1,7 @@
 package LeetCode2;
 
 public class _135_Candy {
-	public int candy(int[] ratings) {
+    public int candy(int[] ratings) {
         if(ratings == null || ratings.length == 0) return 0;
         
         int[] candy = new int[ratings.length];

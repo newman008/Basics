@@ -1,7 +1,7 @@
 package LeetCode2;
 
 public class _121_stock1 {
-	public int maxProfit(int[] prices) {
+    public int maxProfit(int[] prices) {
         if(prices.length == 0) return 0;
         
         int max = 0;

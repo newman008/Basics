@@ -9,14 +9,14 @@ import java.util.Queue;
 import java.util.Stack;
 
 public class _133_CloneGraphg {
-	class UndirectedGraphNode {
-		int label;
- 		List<UndirectedGraphNode> neighbors;
-		UndirectedGraphNode(int x) { label = x; neighbors = new ArrayList<UndirectedGraphNode>(); }
-	};
-	
-	// DFS recursive
-	public UndirectedGraphNode cloneGraph(UndirectedGraphNode node) {
+    class UndirectedGraphNode {
+        int label;
+        List<UndirectedGraphNode> neighbors;
+        UndirectedGraphNode(int x) { label = x; neighbors = new ArrayList<UndirectedGraphNode>(); }
+    };
+    
+    // DFS recursive
+    public UndirectedGraphNode cloneGraph(UndirectedGraphNode node) {
         if(node == null) return null;
         
         HashMap<Integer, UndirectedGraphNode> map = new HashMap<Integer, UndirectedGraphNode>();

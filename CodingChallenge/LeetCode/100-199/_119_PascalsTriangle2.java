@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class _119_PascalsTriangle2 {
-	public List<Integer> getRow(int rowIndex) {
+    public List<Integer> getRow(int rowIndex) {
         List<Integer> res = new ArrayList<Integer>();
         if(rowIndex < 0) return res;
         

@@ -4,13 +4,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class _113_PathSum2 {
-	public class TreeNode {
-	    int val;
-	 	TreeNode left;
-	 	TreeNode right;
-	 	TreeNode(int x) { val = x; }
-	}
-	public List<List<Integer>> pathSum(TreeNode root, int sum) {
+    public class TreeNode {
+        int val;
+        TreeNode left;
+        TreeNode right;
+        TreeNode(int x) { val = x; }
+    }
+    public List<List<Integer>> pathSum(TreeNode root, int sum) {
         List<List<Integer>> res = new ArrayList<List<Integer>>();
         List<Integer> cur = new ArrayList<Integer>();
         

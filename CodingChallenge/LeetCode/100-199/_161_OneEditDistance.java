@@ -1,8 +1,8 @@
 package LeetCode2;
 
 public class _161_OneEditDistance {
-	
-	public boolean isOneEditDistance(String s, String t) {
+    
+    public boolean isOneEditDistance(String s, String t) {
         if(s.length() > t.length()) return isOneEditDistance(t, s);
         
         if(t.length() - s.length() >= 2) return false;
@@ -23,12 +23,12 @@ public class _161_OneEditDistance {
         return true;
     }
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		String s = "";
-		String t = "";
-		_161_OneEditDistance t1 = new _161_OneEditDistance();
-		t1.isOneEditDistance(s, t);
-	}
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+        String s = "";
+        String t = "";
+        _161_OneEditDistance t1 = new _161_OneEditDistance();
+        t1.isOneEditDistance(s, t);
+    }
 
 }

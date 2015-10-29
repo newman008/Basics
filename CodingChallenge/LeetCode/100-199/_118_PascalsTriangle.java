@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class _118_PascalsTriangle {
-	public List<List<Integer>> generate(int numRows) {
+    public List<List<Integer>> generate(int numRows) {
         List<List<Integer>> results = new ArrayList<List<Integer>>();
         List<Integer> res = new ArrayList<Integer>();
         if(numRows == 0) return results;

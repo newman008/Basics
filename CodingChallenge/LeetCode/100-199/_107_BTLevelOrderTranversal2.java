@@ -6,13 +6,13 @@ import java.util.List;
 import java.util.Queue;
 
 public class _107_BTLevelOrderTranversal2 {
-	public class TreeNode {
-	    int val;
-	 	TreeNode left;
-	 	TreeNode right;
-	 	TreeNode(int x) { val = x; }
-	}
-	public List<List<Integer>> levelOrderBottom(TreeNode root) {
+    public class TreeNode {
+        int val;
+        TreeNode left;
+        TreeNode right;
+        TreeNode(int x) { val = x; }
+    }
+    public List<List<Integer>> levelOrderBottom(TreeNode root) {
         List<List<Integer>> results = new ArrayList<List<Integer>>();
         if(root == null) return results;
         

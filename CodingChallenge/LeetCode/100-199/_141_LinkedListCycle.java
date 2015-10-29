@@ -1,16 +1,16 @@
 package LeetCode2;
 
 public class _141_LinkedListCycle {
-	class ListNode {
-	     int val;
-	     ListNode next;
-	     ListNode(int x) {
-	         val = x;
-	         next = null;
-	     }
-	}
-	
-	public boolean hasCycle(ListNode head) {
+    class ListNode {
+         int val;
+         ListNode next;
+         ListNode(int x) {
+             val = x;
+             next = null;
+         }
+    }
+    
+    public boolean hasCycle(ListNode head) {
         if(head == null) return false;
         ListNode slow = head;
         ListNode fast = head;

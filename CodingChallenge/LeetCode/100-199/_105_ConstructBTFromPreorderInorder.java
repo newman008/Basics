@@ -3,14 +3,14 @@ package LeetCode2;
 import LeetCode2._104_MaximumDepthOfBinaryTree.TreeNode;
 
 public class _105_ConstructBTFromPreorderInorder {
-	public class TreeNode {
-	    int val;
-	 	TreeNode left;
-	 	TreeNode right;
-	 	TreeNode(int x) { val = x; }
-	}
-	
-	public TreeNode buildTree(int[] preorder, int[] inorder) {
+    public class TreeNode {
+        int val;
+        TreeNode left;
+        TreeNode right;
+        TreeNode(int x) { val = x; }
+    }
+    
+    public TreeNode buildTree(int[] preorder, int[] inorder) {
         return helper(0, 0, preorder.length-1, preorder, inorder);
     }
     

@@ -1,7 +1,7 @@
 package LeetCode2;
 
 public class _189_RotateArray {
-	public void rotate2(int[] nums, int k) {
+    public void rotate2(int[] nums, int k) {
         k = k % nums.length;
         int l = nums.length;
         int[] tmp = new int[l];
@@ -15,8 +15,8 @@ public class _189_RotateArray {
             nums[i] = tmp[i];
         }
     }
-	
-	public void rotate(int[] nums, int k) {
+    
+    public void rotate(int[] nums, int k) {
         int l = nums.length;
         k = k % l;
         reverse(nums, 0, l-1-k);
@@ -33,5 +33,5 @@ public class _189_RotateArray {
             hi--;
         }
     }
-	
+    
 }
