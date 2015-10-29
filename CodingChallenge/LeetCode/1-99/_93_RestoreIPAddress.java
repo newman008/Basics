@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class _93_RestoreIPAddress {
-	public List<String> restoreIpAddresses2(String s) {
+    public List<String> restoreIpAddresses2(String s) {
         List<String> res = new ArrayList<String>();
         backtrack(res, s, "", 0, 1);
         return res;
@@ -70,8 +70,8 @@ public class _93_RestoreIPAddress {
     }
     
     public static void main(String[] args) {
-		// TODO Auto-generated method stub
-    		_93_RestoreIPAddress t = new _93_RestoreIPAddress();
-		t.restoreIpAddresses("0000");
-	}
+        // TODO Auto-generated method stub
+            _93_RestoreIPAddress t = new _93_RestoreIPAddress();
+        t.restoreIpAddresses("0000");
+    }
 }

@@ -1,7 +1,7 @@
 package LeetCode2;
 
 public class _96_UniqueBST {
-	public int numTrees(int n) {
+    public int numTrees(int n) {
         int[] num = new int[n+1];
         num[0] = 1;
         num[1] = 1;

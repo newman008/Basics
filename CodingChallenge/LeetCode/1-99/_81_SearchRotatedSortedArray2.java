@@ -1,7 +1,7 @@
 package LeetCode2;
 
 public class _81_SearchRotatedSortedArray2 {
-	public boolean search(int[] A, int target) {
+    public boolean search(int[] A, int target) {
         // write your code here
         if(A == null || A.length == 0) return false;
         

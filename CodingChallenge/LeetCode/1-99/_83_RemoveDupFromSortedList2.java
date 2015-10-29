@@ -1,16 +1,16 @@
 package LeetCode2;
 
 public class _83_RemoveDupFromSortedList2 {
-	public class ListNode {
-		int val;
- 		ListNode next;
-		ListNode(int x) {
-			val = x;
-			next = null;
-		}
-	}
-	
-	public ListNode deleteDuplicates(ListNode head) {
+    public class ListNode {
+        int val;
+        ListNode next;
+        ListNode(int x) {
+            val = x;
+            next = null;
+        }
+    }
+    
+    public ListNode deleteDuplicates(ListNode head) {
         // write your code here
         if(head == null || head.next == null) return head;
         
@@ -41,8 +41,8 @@ public class _83_RemoveDupFromSortedList2 {
         
         return fakeHead.next;
     }
-	
-	public ListNode deleteDuplicates2(ListNode head) {
+    
+    public ListNode deleteDuplicates2(ListNode head) {
         // write your code here
         if(head == null || head.next == null) return head;
         

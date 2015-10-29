@@ -1,7 +1,7 @@
 package LeetCode2;
 
 public class _80_RemoveDupFromSortedArray2 {
-	public int removeDuplicates(int[] nums) {
+    public int removeDuplicates(int[] nums) {
         // write your code here
         if(nums.length == 0 || nums.length == 1) return nums.length;
         int j = 1;

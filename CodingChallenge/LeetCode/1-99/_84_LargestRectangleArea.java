@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.Stack;
 
 public class _84_LargestRectangleArea {
-	public int largestRectangleArea(int[] height) {
+    public int largestRectangleArea(int[] height) {
         height = Arrays.copyOf(height, height.length+1);
         int Max = 0;
         Stack<Integer> stack = new Stack<Integer>();

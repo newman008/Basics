@@ -4,14 +4,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class _95_UniqueBST2 {
-	public class TreeNode {
-	    int val;
-	 	TreeNode left;
-	 	TreeNode right;
-	 	TreeNode(int x) { val = x; }
-	}
-	
-	public List<TreeNode> generateTrees(int n) {
+    public class TreeNode {
+        int val;
+        TreeNode left;
+        TreeNode right;
+        TreeNode(int x) { val = x; }
+    }
+    
+    public List<TreeNode> generateTrees(int n) {
         return genTrees(1, n);
     }
     

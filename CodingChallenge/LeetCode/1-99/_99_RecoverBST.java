@@ -1,14 +1,14 @@
 package LeetCode2;
 
 public class _99_RecoverBST {
-	public class TreeNode {
-	    int val;
-	 	TreeNode left;
-	 	TreeNode right;
-	 	TreeNode(int x) { val = x; }
-	}
-	
-	public void recoverTree(TreeNode root) {
+    public class TreeNode {
+        int val;
+        TreeNode left;
+        TreeNode right;
+        TreeNode(int x) { val = x; }
+    }
+    
+    public void recoverTree(TreeNode root) {
         TreeNode cur = root;
         TreeNode pre = null;
         TreeNode first = null;

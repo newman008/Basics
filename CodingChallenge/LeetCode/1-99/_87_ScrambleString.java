@@ -3,7 +3,7 @@ package LeetCode2;
 import java.util.Arrays;
 
 public class _87_ScrambleString {
-	public boolean isScramble(String s1, String s2) {
+    public boolean isScramble(String s1, String s2) {
         if(s1.equals(s2)) return true;
         int l = s1.length();
         char[] c1 = s1.toCharArray();

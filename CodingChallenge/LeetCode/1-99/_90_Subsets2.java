@@ -5,7 +5,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public class _90_Subsets2 {
-	public List<List<Integer>> subsetsWithDup(int[] nums) {
+    public List<List<Integer>> subsetsWithDup(int[] nums) {
         List<List<Integer>> results = new ArrayList<List<Integer>>();
         List<Integer> res = new ArrayList<Integer>();
         results.add(res);

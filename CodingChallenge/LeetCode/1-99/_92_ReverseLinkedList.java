@@ -1,16 +1,16 @@
 package LeetCode2;
 
 public class _92_ReverseLinkedList {
-	public class ListNode {
-			int val;
-		 	ListNode next;
-		 	ListNode(int x) {
-			val = x;
-			next = null;
-		 }
-	}
-	
-	public ListNode reverseBetween(ListNode head, int m, int n) {
+    public class ListNode {
+            int val;
+            ListNode next;
+            ListNode(int x) {
+            val = x;
+            next = null;
+         }
+    }
+    
+    public ListNode reverseBetween(ListNode head, int m, int n) {
         ListNode fakehead = new ListNode(0);
         fakehead.next = head;
         ListNode cur = head;

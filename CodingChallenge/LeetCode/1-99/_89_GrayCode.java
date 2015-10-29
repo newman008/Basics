@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class _89_GrayCode {
-	public List<Integer> grayCode(int n) {
+    public List<Integer> grayCode(int n) {
         if(n == 0) {
             List<Integer> res = new ArrayList<Integer>();
             res.add(0);

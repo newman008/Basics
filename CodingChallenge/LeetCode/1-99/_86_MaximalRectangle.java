@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.Stack;
 
 public class _86_MaximalRectangle {
-	public int maximalRectangle(char[][] matrix) {
+    public int maximalRectangle(char[][] matrix) {
         if(matrix == null || matrix.length == 0 || matrix[0].length == 0) return 0;
         int max = 0;
         int[] h = new int[matrix[0].length];
