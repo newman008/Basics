@@ -30,10 +30,10 @@ private static final String[] keys = {"", "", "abc", "def", "ghi", "jkl", "mno",
         res = tmp;
         backtrack(res, digits, index+1);
     }
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		CombinationOfPhoneNumber t = new CombinationOfPhoneNumber();
-		t.letterCombinations("2");
-	}
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+        CombinationOfPhoneNumber t = new CombinationOfPhoneNumber();
+        t.letterCombinations("2");
+    }
 
 }

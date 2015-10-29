@@ -1,7 +1,7 @@
 package lintCode;
 
 public class DivideTwoIntegers {
-	public int divide(int dividend, int divisor) {
+    public int divide(int dividend, int divisor) {
         if(divisor == 1) return dividend;
         if(divisor == 0) return Integer.MAX_VALUE;
         if(dividend == Integer.MIN_VALUE && divisor == -1) return Integer.MAX_VALUE;
@@ -33,10 +33,10 @@ public class DivideTwoIntegers {
         
         return res * sign;
     }
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		DivideTwoIntegers t = new DivideTwoIntegers();
-		t.divide(-2147483648, 2);
-	}
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+        DivideTwoIntegers t = new DivideTwoIntegers();
+        t.divide(-2147483648, 2);
+    }
 
 }

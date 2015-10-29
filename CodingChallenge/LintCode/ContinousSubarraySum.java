@@ -3,8 +3,8 @@ package lintCode;
 import java.util.ArrayList;
 
 public class ContinousSubarraySum {
-	
-	public ArrayList<Integer> continuousSubarraySumII(int[] A) {
+    
+    public ArrayList<Integer> continuousSubarraySumII(int[] A) {
         // Write your code here
         ArrayList<Integer> linearRes = new ArrayList<Integer>();
         ArrayList<Integer> cirRes = new ArrayList<Integer>();
@@ -94,12 +94,12 @@ public class ContinousSubarraySum {
         return cir_max;
         
     }
-	
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		int[] nums = {-5,10,5,-3,1,1,1,-2,3,-4};
-		ContinousSubarraySum t = new ContinousSubarraySum();
-		t.continuousSubarraySumII(nums);
-	}
+    
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+        int[] nums = {-5,10,5,-3,1,1,1,-2,3,-4};
+        ContinousSubarraySum t = new ContinousSubarraySum();
+        t.continuousSubarraySumII(nums);
+    }
 
 }

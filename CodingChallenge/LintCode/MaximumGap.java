@@ -1,7 +1,7 @@
 package lintCode;
 
 public class MaximumGap {
-	class Bucket {
+    class Bucket {
         int low;
         int high;
         public Bucket() {
@@ -50,11 +50,11 @@ public class MaximumGap {
         return res;
     }
     
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		MaximumGap t = new MaximumGap();
-		int[] nums = new int[]{3,2,1,4,3};
-		t.maximumGap(nums);
-	}
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+        MaximumGap t = new MaximumGap();
+        int[] nums = new int[]{3,2,1,4,3};
+        t.maximumGap(nums);
+    }
 
 }

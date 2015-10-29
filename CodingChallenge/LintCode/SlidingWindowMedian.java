@@ -5,7 +5,7 @@ import java.util.PriorityQueue;
 import java.util.Comparator;
 
 public class SlidingWindowMedian {
-	public ArrayList<Integer> medianSlidingWindow(int[] nums, int k) {
+    public ArrayList<Integer> medianSlidingWindow(int[] nums, int k) {
         // write your code here
         ArrayList<Integer> res = new ArrayList<Integer>();
         if(nums == null || nums.length == 0 || k < 1) return res;
@@ -46,12 +46,12 @@ public class SlidingWindowMedian {
         
         return res;
     }
-	
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		SlidingWindowMedian t = new SlidingWindowMedian();
-		int[] nums = {142,38,100,53,22,84,168,50,194,136,111,13,47,45,151,164,126,47,106,124,183,8,87,38,91,121,102,46,82,195,53,18,11,165,61};
-		t.medianSlidingWindow(nums, 35);
-	}
+    
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+        SlidingWindowMedian t = new SlidingWindowMedian();
+        int[] nums = {142,38,100,53,22,84,168,50,194,136,111,13,47,45,151,164,126,47,106,124,183,8,87,38,91,121,102,46,82,195,53,18,11,165,61};
+        t.medianSlidingWindow(nums, 35);
+    }
 
 }

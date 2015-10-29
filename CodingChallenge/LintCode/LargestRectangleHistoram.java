@@ -3,8 +3,8 @@ package lintCode;
 import java.util.Stack;
 
 public class LargestRectangleHistoram {
-	
-	public int largestRectangleArea(int[] height) {
+    
+    public int largestRectangleArea(int[] height) {
         if(height == null || height.length == 0) return 0;
         
         Stack<Integer> stack = new Stack<Integer>();
@@ -27,12 +27,12 @@ public class LargestRectangleHistoram {
         
         return max;
     }
-	
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		LargestRectangleHistoram t = new LargestRectangleHistoram();
-		int[] nums = new int[]{4, 2};
-		t.largestRectangleArea(nums);
-	}
+    
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+        LargestRectangleHistoram t = new LargestRectangleHistoram();
+        int[] nums = new int[]{4, 2};
+        t.largestRectangleArea(nums);
+    }
 
 }

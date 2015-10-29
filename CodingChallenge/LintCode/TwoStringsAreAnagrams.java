@@ -1,7 +1,7 @@
 package lintCode;
 
 public class TwoStringsAreAnagrams {
-	public boolean anagram(String s, String t) {
+    public boolean anagram(String s, String t) {
         // write your code here
         if(s.length() != t.length()) return false;
         int[] count = new int[256];
@@ -16,12 +16,12 @@ public class TwoStringsAreAnagrams {
         }
         return true;
     }
-	
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		TwoStringsAreAnagrams t = new TwoStringsAreAnagrams();
-		String s1 = new String("abcd");
-		String s2 = new String("bdac");
-		boolean res = t.anagram(s1, s2);
-	}
+    
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+        TwoStringsAreAnagrams t = new TwoStringsAreAnagrams();
+        String s1 = new String("abcd");
+        String s2 = new String("bdac");
+        boolean res = t.anagram(s1, s2);
+    }
 }

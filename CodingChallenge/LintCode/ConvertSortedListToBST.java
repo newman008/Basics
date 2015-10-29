@@ -1,7 +1,7 @@
 package lintCode;
 
 class ListNode {
-	int val;
+    int val;
   ListNode next;
   ListNode(int val) {
       this.val = val;
@@ -13,16 +13,16 @@ class TreeNode {
 public int val;
 public TreeNode left, right;
 public TreeNode(int val) {
-	this.val = val;
-	this.left = this.right = null;
+    this.val = val;
+    this.left = this.right = null;
 }
 }
 
 public class ConvertSortedListToBST {
 
-	
-	
-	public TreeNode sortedListToBST(ListNode head) {  
+    
+    
+    public TreeNode sortedListToBST(ListNode head) {  
         // write your code here
         int l = getLength(head);
         return helper(head, 0, l-1);
@@ -55,16 +55,16 @@ public class ConvertSortedListToBST {
         return l;
     }
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		ConvertSortedListToBST t = new ConvertSortedListToBST();
-		ListNode head = new ListNode(3);
-		ListNode node1 = new ListNode(5);
-		ListNode node2 = new ListNode(8);
-		head.next = node1;
-		node1.next = node2;
-		t.sortedListToBST(head);
-		
-	}
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+        ConvertSortedListToBST t = new ConvertSortedListToBST();
+        ListNode head = new ListNode(3);
+        ListNode node1 = new ListNode(5);
+        ListNode node2 = new ListNode(8);
+        head.next = node1;
+        node1.next = node2;
+        t.sortedListToBST(head);
+        
+    }
 
 }

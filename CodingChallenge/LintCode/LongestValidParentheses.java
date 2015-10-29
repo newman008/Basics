@@ -3,7 +3,7 @@ package lintCode;
 import java.util.Stack;
 
 public class LongestValidParentheses {
-	public int longestValidParentheses(String s) {
+    public int longestValidParentheses(String s) {
         if(s == null || s.length() == 0) return 0;
         Stack<Integer> stack = new Stack<Integer>();
         int max = 0;
@@ -23,10 +23,10 @@ public class LongestValidParentheses {
         
         return max;
     }
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		LongestValidParentheses t = new LongestValidParentheses();
-		t.longestValidParentheses("()");
-	}
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+        LongestValidParentheses t = new LongestValidParentheses();
+        t.longestValidParentheses("()");
+    }
 
 }

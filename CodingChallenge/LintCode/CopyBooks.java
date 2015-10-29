@@ -1,7 +1,7 @@
 package lintCode;
 
 public class CopyBooks {
-	public int copyBooks(int[] pages, int k) {
+    public int copyBooks(int[] pages, int k) {
         // write your code here
         int[][] dp = new int[k][pages.length];
         int sum = 0;
@@ -30,11 +30,11 @@ public class CopyBooks {
         
         return dp[k-1][pages.length - 1];
     }
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		CopyBooks t = new CopyBooks();
-		int[] pages = {3, 2, 4};
-		t.copyBooks(pages, 2);
-	}
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+        CopyBooks t = new CopyBooks();
+        int[] pages = {3, 2, 4};
+        t.copyBooks(pages, 2);
+    }
 
 }

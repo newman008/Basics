@@ -1,7 +1,7 @@
 package lintCode;
 
 public class Atoi {
-	public int myAtoi(String str) {
+    public int myAtoi(String str) {
         if(str == null || str.length() == 0) return 0;
         str = str.trim();
         
@@ -28,11 +28,11 @@ public class Atoi {
         
         return sign * res;
     }
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		Atoi t = new Atoi();
-		int res = t.myAtoi("-2147483648");
-		System.out.print(res);
-	}
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+        Atoi t = new Atoi();
+        int res = t.myAtoi("-2147483648");
+        System.out.print(res);
+    }
 
 }

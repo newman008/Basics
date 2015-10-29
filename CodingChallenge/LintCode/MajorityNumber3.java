@@ -5,7 +5,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class MajorityNumber3 {
-	public int majorityNumber(ArrayList<Integer> nums, int k) {
+    public int majorityNumber(ArrayList<Integer> nums, int k) {
         // write your code
         Map<Integer, Integer> map = new HashMap<Integer, Integer>();
         for(int num : nums) {
@@ -48,16 +48,16 @@ public class MajorityNumber3 {
         
         return res;
     }
-	
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		MajorityNumber3 t = new MajorityNumber3();
-		ArrayList<Integer> nums = new ArrayList<Integer>();
-		int[] num = {3,1,2,3,2,3,3,4,4,4};
-		for(int n : num) {
-			nums.add(n);
-		}
-		
-		System.out.print(t.majorityNumber(nums, 3));
-	}
+    
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+        MajorityNumber3 t = new MajorityNumber3();
+        ArrayList<Integer> nums = new ArrayList<Integer>();
+        int[] num = {3,1,2,3,2,3,3,4,4,4};
+        for(int n : num) {
+            nums.add(n);
+        }
+        
+        System.out.print(t.majorityNumber(nums, 3));
+    }
 }
