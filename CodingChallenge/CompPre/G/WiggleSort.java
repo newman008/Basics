@@ -1,4 +1,7 @@
 package InterviewQuestions;
+// Write a function to convert the array into alternate increasing decreasing numbers:
+// a[0] <= a[1] >= a[2] <= a[3] >=...
+// Note: You should solve it in place and one pass.
 // [1,2,3,4,5] => [1, 3, 2, 5, 4] a[0] <= a[1] >= a[2] <= a[3] >= a[4]
 public class WiggleSort {
     

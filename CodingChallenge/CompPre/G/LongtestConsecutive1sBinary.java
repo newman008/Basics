@@ -1,5 +1,9 @@
 package InterviewQuestions;
 
+/*
+Find the longest continuous subsequence of 1's in binary representation of an integer.
+*/
+
 public class LongtestConsecutive1sBinary {
 
     public int countConsecutive1s(int n) {

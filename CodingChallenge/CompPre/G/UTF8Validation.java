@@ -1,4 +1,7 @@
 package InterviewQuestions;
+/*
+Write a function to validate whether the input is valid UTF-8. Input will be string or byte array, output should be true or false.
+*/
 
 public class UTF8Validation {
     

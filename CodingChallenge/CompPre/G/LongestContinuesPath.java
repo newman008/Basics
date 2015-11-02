@@ -1,4 +1,16 @@
 package InterviewQuestions;
+/*
+给一个树root的pointer，树包含多个分支，树结构要自己创造。求一条最长路径。
+例如（括号对应上面node）
+树：                  2
+      |            |            |                |
+     5            7          3                 6
+（|       | ）（ | ）（ | ）        （|       |）
+  6       3        2         4              5       8
+                     |
+                     3
+返回3因为 （2-3-4） 这条线。优化要求时间O(n)
+*/
 
 import java.util.ArrayList;
 import java.util.List;

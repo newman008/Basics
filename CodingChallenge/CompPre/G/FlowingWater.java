@@ -1,4 +1,29 @@
 package InterviewQuestions;
+/*
+Given a N*N matrix contains lakes, each lake is represented by an elevation. The water in each lake can flow to its neighbours which has lower or equal elevations.
+
+Suppose the left and top side of the matrix is surrounded by Pacific, the right and bottom is Atlantic.
+
+Please write a function and return all lakes that can flow to both Pacific and Atlantic.
+
+For example:
+
+Pacific: ~
+Atlantic: *
+
+~  ~   ~   ~   ~   ~  ~
+~  1   2   2   3  (5) *
+~  3   2   3  (4) (4) *
+~  2   4  (5)  3   1  *
+~ (6) (7)  1   4   5  *
+~ (5)  1   1   2   4  *
+*  *   *   *   *   *  *
+The elements in parentheses are expected outputs:
+
+[[0, 4], [1, 3], [1, 4], [2, 2], [3, 0], [3, 1], [4, 0]]
+
+
+*/
 
 import java.util.ArrayList;
 import java.util.List;

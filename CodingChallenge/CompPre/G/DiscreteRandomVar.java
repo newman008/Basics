@@ -1,4 +1,10 @@
 package InterviewQuestions;
+/*
+Given K discrete events with different probabilities P[k], produce a random value k consistent with its probability.
+discrete random variable distribution, generate random number.
+比如 给你 [0.2, 0.3, 0.5] 输出0 with probability 0.2, 1 with prob 0.3, 2 with prob 0.5
+Follow up : how to speed up
+*/
 
 import java.util.Arrays;
 import java.util.Random;

@@ -1,4 +1,7 @@
 package InterviewQuestions;
+/*
+given grid of colors, coordinate of a point and its color, find the perimeter of the region that has the same color of that point.
+*/
 
 import java.util.LinkedList;
 import java.util.Queue;

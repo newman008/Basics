@@ -1,4 +1,8 @@
 package InterviewQuestions;
+/*
+一个 n x n 矩阵，每个房间可能是封闭的房间，可能是警察，可能是开的房间， 封闭的房间不能过，返回一个n x n矩阵，每一个元素是最近的警察到这个房间的最短距离。 
+初始矩阵中-1代表封闭房间，INT_MAX代表普通房间，0代表有警察的房间。
+*/
 
 public class ShortDistanceByPolice {
     

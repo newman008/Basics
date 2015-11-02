@@ -1,4 +1,11 @@
 package InterviewQuestions;
+/*
+Suppose you have a Iterator class with has_next() and get_next() methods.
+
+Please design and implement a PeekIterator class as a wrapper of Iterator and provide a peek() method.
+
+When calling peek(), the user will only get the current element without moving forward the iterator.
+*/
 
 import java.util.Iterator;
 

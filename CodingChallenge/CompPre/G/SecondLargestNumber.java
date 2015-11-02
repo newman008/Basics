@@ -1,5 +1,8 @@
 package InterviewQuestions;
 
+// Find the second largest number in a given array.
+// Return 0 if the given array has no second largest number.
+
 public class SecondLargestNumber {
     
     public int secondLargest(int[] nums) {

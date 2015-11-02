@@ -1,4 +1,12 @@
 package InterviewQuestions;
+/*
+Given a family tree for a few generations for the entire population and two people, write a routine that will find out if they are blood related. 
+Siblings are blood related since they have the same parents. Cousins are blood related since one of their parents have the same parents etc. 
+You have a genealogy: 
+1) Describe a data structure to represent it. 
+2) Given any two people within the genealogy, describe an algorithm to determine if they share a common ancestor. You just need to return true/false, not all ancestors.
+即判断两个人在家族图谱中是否存在血缘关系。
+*/
 
 import java.util.ArrayList;
 import java.util.HashSet;

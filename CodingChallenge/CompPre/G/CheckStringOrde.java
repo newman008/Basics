@@ -1,4 +1,10 @@
 package InterviewQuestions;
+/*
+given an order string "abc" check if "aabdccd" maintain the order
+"aabdccd" -> true;
+"abbca" -> false;
+note:order does not contain all chars in s
+*/
 
 import java.util.Arrays;
 

@@ -1,4 +1,7 @@
 package InterviewQuestions;
+/*
+Write an algorithm that counts the number of ways you can paint a fence with N posts using K colors such that no more than 2 adjacent fence posts are painted with the same color.
+*/
 
 public class FencePainter {
 

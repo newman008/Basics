@@ -1,5 +1,11 @@
 package InterviewQuestions;
 
+/*
+找出1～10^n中数字翻转过来是本身的数（ 96 －>96, 18 -> 81, 0 -> 0, 其他数字翻过来都不是数字）
+设计一个函数，判断某个只包含数字的字符串是不是Ambigram（比如，69，88，609，818等都是Ambigram）。
+Follow up：给一个整数n，找出所有长为n的Ambigram。
+*/
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;

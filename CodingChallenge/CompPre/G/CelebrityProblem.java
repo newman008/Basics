@@ -1,5 +1,10 @@
 package InterviewQuestions;
 
+/*
+You have a room with n people. A celebrity walks in. Everyone knows the celebrity, the celebrity knows no one. 
+Non-celebrities may/may not know anyone in the room. Give an algorithm to find the celebrity. Discuss the complexity.
+*/
+
 import java.util.LinkedList;
 import java.util.Queue;
 

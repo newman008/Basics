@@ -1,4 +1,9 @@
 package InterviewQuestions;
+/*
+算法游戏，给一个只有＋－两种字符的array，两个玩家，轮到某个玩家他可以任选
+两个连续的＋＋将他们变成－－，如果某个玩家发现对方无法行动则赢得游戏，要求写
+canWin（String s）判断先行动的玩家能否赢。
+*/
 
 import java.util.Arrays;
 

@@ -1,5 +1,7 @@
 package InterviewQuestions;
 
+// Given a 2D array, find the maximum sum subarray in it.
+
 public class MaximumSubMatrixSum {
     
     public int maxSubmatrixSum(int[][] matrix) {
