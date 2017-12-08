@@ -1,0 +1,103 @@
+CHAPTER 2: Creating and Destorying Objects
+
+Item 1 : Consider static factory methods instead of constructors
+ Advantages:
+ 1. static factory methods have names
+ 2. static factory methods are not required to create new object each time they're invoked
+ 3. static factory methods can return an object of any subtype of their return type
+ 4. static factory methods reduce the verbosity of creating parameterized type instances
+    Map<String, List<String>> m = HashMap.newInstance();
+
+ Disadvantages:
+ 1. classes without public or protected constructors cannot be subclassed
+ 2. They are not really distinguishable from other static methods
+    valueOf
+    getInstance
+    newInstance
+
+Item 2 : Consider a builder when faced with many constructor parameters
+  1. Telescoping constructor pattern, in which you provide a constructor with only the required paramters, another with a single optional parameters, a third with two optional parameters and so on  --->>> Does Not Scale Well 
+     It's hard to write client code when there are many parameters, and harder still to read it.
+  2. JavaBeans Pattern Disadvantage:
+     1) may be in an inconsistent state partway through its construction
+     2) precludes the possibility of making the class immutable
+  3. Builder Pattern
+
+Item 3 : Enforce the singleton property with a private constructor or an enum type
+  1. Making a class a singleton can make it difficult to test its clients
+  2. A single-element enum type is the best way to implement a singleton
+
+Item 4 : Enforce noninstantiability with a private constructor
+  1. a class can be made noninstantiable by including a private constructor
+  2. As a side effect, this idiom also prevents the class from being subclassed. All constructors must invoke a superclass constructor, explicitly or implicitly, and a subclass would have no accessible superclass constructor to invoke
+
+Item 5 : Avoid creating unnecessary objects
+  1. String s = new String("stradafa"); // Don't do this   
+     String s = "dfafafas";    
+  2. Prefer primitives to boxed primitives, and watch out for untentional autoboxing
+     public static void main() {
+         Long sum = 0L; /// better to use long
+         for (long i = 0; i < Integer.Max_VALUE; i++) {
+             sum += i;
+     }
+
+Item 6: Eliminate obsolete object references
+  1. Whenever a class manages its own memory, the programmer should be alert for memory leaks
+  2. Another comman source of memory leaks is caches
+  3. A third common source of memory leaks is listerneres and other callbacks
+
+Item 7: Avoid finalizers
+  1. never do anything time-critical in a finalizer
+  2. there is a severe performance penalty for using finalizers 
+
+CHAPTER 3 Methods Common to All Objects
+
+Item 8: Obey the general contract when overriding equals
+  1. Not to override the equals method
+     1) Each instance of the class is inherently unique
+     2) You don't care whether the class provides a "logical equality" test
+     3) A superclass has already overridden equals, and the superclass behavior is appropriate for this class
+     4) The class is private or package-priavte, and you are cerntain that its equals method will never be invoked
+  2. When is it appropriate to override Object.equals?
+     When a class has a notion of logical equality that differs from mere object identity, and a superclass has not already overridden equals to implement the desired behavior. This     is generally the case for value classes.
+  3. When you override the equals method, you must adhere to its general contract: Reflexive, Symmetric, Transitivie, Consistent
+  4. There is no way to extand an instantiable class and add a value component while preserving the equals contract, this is a fundamental problem of equivalence relations in OO lan     guanges. Workaround is composition over inheritance
+
+Item 9: Always override hashCode when you override equals
+  1. The key provision that is violated when you fail to override hashCode is the second one: equal objects must have equal hash codes
+  2. Do not be tempted to exclude significant parts of an object from the hash code computation to improve performance
+
+Item 10: Alaways override toString
+  1. Providing a good toString implementation makes your class much more pleasant to use
+  2. When practical, the toString method should return all of the interesting information contained in the object
+  3. Whether or not you decide to specify the format, you should clearly document your intentions.
+
+Item 11: Override clone judiciously
+  1. Normally, implementing an interface says sth about what a class can do for its clients. In the case of Cloneable, it modifies the behavior of a protected method on a superclass.
+  2. If you override the clone method in a nonfinal class, you should return an object obtained by invoking super.clone
+  3. In effect, the clone method functions as another constructor; you must ensure that it does no harm to the original object and that it properly establishes invariants on the clone
+  4. The clone architecture is incompatible with normal use of final fields referring to mutable objects
+  5. A fine approach to object copying is to provide a copy constructor or copy factory.
+
+Item 12: Consider implementing Comparable
+  1. If sorting of objects needs to be based on natural order then use Comparable, if sorting needs to be done on attribute of different objects, then use Comparator 
+  2. If you don't have control over a class(or you want to provide multiple ways to compare objects that you do have control over), then use Comparator.
+
+Item 13: Minimize the accessibility of classes and members
+  1. Information hiding or encapsulation
+  2. Rule of thumb: make each class or member as inaccessible as possible
+
+Item 14: In public class, use accessor methods, not public fields
+  1. If a class is accessible outside of its package, provide accessor methods
+
+Item 15: Minimize mutability
+  1. Immutable objects are simple
+  2. Immutable objects are inherently thread-safe; they require no synchronization
+  3. Immutable objects can be shared freely
+  4. The only real disadvantage of immutable classes is thay they require a spearate object for each distinct value 
+  5. Classes should be immutable unless there's a very good reason to make them mutable
+  6. If a class can't be made immutable, limit its mutabliity as much as possible.
+  7. Make every field final unless there is a compelling reason to make it nonfinal, like cache the results of expensive computations the first time they are needed
+
+Item 16: Favor composition over inheritance
+  1. To avoid this fragility, use composition and forwarding instead of inheritance, especially if an appropriate interface to implement a wrapper class exists. Not only are wrapper classes more robust than subclasses, they are also more powerful.
