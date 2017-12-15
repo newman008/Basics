@@ -121,3 +121,100 @@ Item 20: Prefer class hierarchies to tagged classes
 
 Item 21: Use function objects to represent strategies
   1. A primary use of function pointers is to implement the Strategy pattern. To implement in Java, declare an interface to represrent the strategy, and a class that implements this interface for each concrete strategy. When a concrete strategy is used only once, it's typicially declared and instantiated as an anonymous class. When a concrete strategy is designed for repeated use, it's generally implemented as a private static memeber class and exported in a public static final field whose type is the strategy interface
+
+Item 22: Favor static member classes over nonstatic
+  1. If you declare a member class that does not require access to an enclosing instance, always put the static modifier in its declaration
+  2. There are four kinds of nested classes: static member classes, nonstatic member classes, anonymous classes and local classes
+
+Item 23: Don't use raw types in new code
+  1. If you use raw types, you lose all the safety and expressiveness benefits of generics
+  2. You lose type safety if you use a raw type like List, but not if you use a parameterized type like List<Object>
+  3. You can't put any element(other than null) into a Collection<?>
+  4. Two exceptions: class literals(List<String>.class is not legal) and instanceof operator
+
+Item 24: Eliminate unchecked warnings
+  1. Eliminate every unchecked warning that you can
+  3. If  you can't eliminate a warning and you can prove that the code that provoked the warning is typesafe, then suppress the warning with @SuppressWarnings annotation
+
+Item 25: Prefer lists to arrays
+  1. Arrays and generics do not mix well
+  2. Array provide runtime type safety but not compile-time type safety and vice versa for generics.
+
+Item 26: Favor generic types
+  1. Object type in collections are good candidate to replace with generic types
+  2. new E[] cause compile time error, use (E[] new Object[]) instead
+
+Item 27: Favor generic methods
+  1. Static utility methods are particularly good candidates for generification
+  2. The type parameter list, which declares the type parameter, goes between the method's modifiers and its return type(public static <K, V> void method())
+  3. Generic methods could type inference of arguments
+
+Item 28: Use bounded wildcards to increase API flexibility
+  1. Generics are invariant(List<Integer> is not a subtype of List<Number>)
+  2. For maximum flexibility, use wildcard types on input parameters that represent producers or consumers
+  3. PECS stands for producer-extends, consumer-super
+  4. Producer: add(List<? extends Number>)
+  5. Consumer: get(List<? super Number>)
+  6. Do not use wildcard types as return types
+  7. Comparable and Comparator are consumers
+
+Item 29: Consider typesafe heterogeneous containers
+  1. You can use Class objects as keys for such typesafe heterogeneous containers
+
+Item 30: Use enums instead of int constants
+  1. Int enum patterns has many shortcomings, it provides nothing in the way of type safety and little in the way of convenience
+  2. Enums provide complie-time type safety
+  3. Each enum internally is public static final int field
+  4. You can add/reorder constants in a enum type without recompiling clients
+  5. To associate data with enum constants, declare instance fields and write a constructor that takes the data and stores it in the fields
+  6. If an enum is generally useful, it should be a top-level class; if its use is tied to a specific top-level class, it should be a member class of that top-level class
+  7. To avoid switch on enum constant, we can use constant-specific method implementations, which declare an abstract apply method in the enum type and override it with a concrete method
+  8. In some cases, overriding toString in an enum is very useful
+  9. Enum types have an automatically generated valueOf(String) method that translates a constant's name into the constant itself
+  10. Use strategy enum pattern to share code among enum constants
+  11. Switches on enums are good for augmenting external enum types with constant-specific behavior
+
+Item 31: Useinstancefieldsinsteadofordinals
+  1. Many enums are naturally associated with a single int value
+  2. All enums have an ordinal method, which returns the numerical position of each enum constant in its type.
+  3. Never derive a value associated with an enum from its ordinal; store it in an instance field instead
+     public enum Ensemble {
+         SOLO(1), DUET(2), TRIO(3), QUARTET(4), QUINTET(5),
+         SEXTET(6), SEPTET(7), OCTET(8), DOUBLE_QUARTET(8),
+         NONET(9), DECTET(10), TRIPLE_QUARTET(12);
+         private final int numberOfMusicians;
+         Ensemble(int size) { this.numberOfMusicians = size; } 
+         public int numberOfMusicians() { return numberOfMusicians; }
+     }
+
+Item 32: Use EnumSet instead of bit fields
+  1. just because an enumerated type will be used in sets, there is no reason to represent it with bit fields
+  2. The EnumSet class combines the con- ciseness and performance of bit fields with all the many advantages of enum types
+
+Item 33: Use EnumMap instead of ordinal indexing
+  1. it is rarely appropriate to use ordinals to index arrays: use EnumMap instead
+
+Item 34: Emulate extensible enums with interfaces
+  1. For the most part, extensibility of enums turns out to be a bad idea
+  2. while you cannot write an extensible enum type, you can emulate it by writing an interface to go with a basic enum type that imple- ments the interface.
+
+Item 35: Prefer annotations to naming patterns
+  1. More generally, annotations never change the semantics of the annotated code, but enable it for special treatment by tools
+  2. There is simply no reason to use naming patterns now that we have annotations.
+  3. All programmers should, however, use the pre- defined annotation types provided by the Java platform
+
+Item 36: Consistently use the Override annotation
+  1. use the Override annotation on every method decla- ration that you believe to override a superclass declaration
+
+Item 37: Use marker interfaces to define types
+  1. A marker interface is an interface that contains no method declarations
+  2. marker interface vs marker annotation
+  3. marker interfaces define a type that is implemented by instances of the marked class; marker annotations do not
+  4. Marker interfaces can be targeted more precisely by extending that interface
+  5. The chief advantage of marker annotations over marker interfaces is that it is possible to add more information to an annotation type after it is already in use, by adding one or more annotation type elements with defaults (Java8 default methods)
+
+Item 38: Check parameters for validity
+  1. Fail fast
+  2. For public methods, use the Javadoc @throws tag to document the exception that will be thrown if a restriction on parameter values is violated
+  3. nonpublic methods should generally check their parameters using assertions
+  4. Do not use validity check if it is impractical or performed implicitly in the process of doing the computation
