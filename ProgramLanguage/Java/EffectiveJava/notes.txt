@@ -218,3 +218,166 @@ Item 38: Check parameters for validity
   2. For public methods, use the Javadoc @throws tag to document the exception that will be thrown if a restriction on parameter values is violated
   3. nonpublic methods should generally check their parameters using assertions
   4. Do not use validity check if it is impractical or performed implicitly in the process of doing the computation
+
+Item 39: Make defensive copies when needed
+  1. You must program defensively, with the assumption that clients of your class will do their best to destroy its invariants
+  2. It is essential to make a defensive copy of each mutable parameter to the constructor
+  3. Defensive copies are made before checking the validity of the parameters and validity check is performed on the copies rather than on the originals
+  4. Do not use the clone method to make a defensive copy of a parameter whose type is subclassable by untrusted parties
+  5. When possible, use immutable objects as components of your objects, so that you don't have to worry about defensive copying
+  6. Defensive copying can have performance penalty associated with it and isn't always justified
+  7. If the class trusts its clients not to modify the components inappropriately, then the defensive copy may be replaced by documentation outlining the client's responsibility not to modify the affected components
+
+Item 40: Design method signature carefully
+  1. Don't go overboard in providing convenience methods
+  2. Avoid long parameter lists
+  3. For parameter types, favor interfaces over classes, e.g. favor Map instead of HashMap
+  4. Perfer two-element enum types to boolean parameters
+
+Item 41: Use overloading judiciously
+  1. The choice of which overloading to invoke is made at compile time
+  2. avoid confusing uses of over-loading
+  3. A safe, conservative policy is never to export two overloadings with the same number of parameters
+  4. In some cases, especially where constructors are involved, it may be impossible to follow this advice. In that case, you should at least avoid situations where the same set of parameters can be passed to different overloadings by the addition of casts
+
+Item 42: Use varargs judiciously
+  1. Don’t retrofit every method that has a final array parameter; use varargs only when a call really operates on a variable-length sequence of values.
+  2. Use call(int, int...) when you need one or more arguments
+  3. Every invocation of a varargs method causes an array allocation and initial- ization.
+
+Item 43: Return empty arrays or collections, not nulls
+  1. Return nulls requires extra code in the client to handle the null return value
+  2. There is no reason ever to return null from an array or collection-valued method instead of returnning an empty array or collection
+
+Item 44: Write doc comments for all exposed API elements
+  1. To document your API properly, you must precede every exported class, interface, constructor, method, and field declaration with a doc comment.
+  2. The doc comment for a method should describe succinctly the contract between the method and its client.
+  3. Methods should document any side effects
+  4. It is no longer necessary to use the HTML <code> or <tt> tags in doc comments: the Javadoc {@code} tag is preferable because it eliminates the need to escape HTML metacharacters. 
+  5. The best way to get HTML medacharacters into documenta- tion is to surround them with the {@literal} tag
+  6. no two members or constructors in a class or interface should have the same summary description
+  7. For methods and constructors, the summary description should be a full verb phrase describing the action performed by the method
+  8. For classes, interfaces, and fields, the summary description should be a noun phrase describing the thing represented by an instance of the class or interface or by the field itself
+  9. When documenting a generic type or method, be sure to document all type parameters
+  10. When documenting an enum type, be sure to document the constants
+  11. When documenting an annotation type, be sure to document any mem- bers
+  12. Two aspects of a class’s exported API that are often neglected are thread- safety and serializability.
+  13. Whether or not a class is thread-safe, you should docu- ment its thread-safety level, as described in Item 70. If a class is serializable, you should document its serialized form, as described in Item 75.
+
+Item 45: Minimize the scope of local variables
+  1. The most powerful technique for minimizing the scope of a local variable is to declare it where it is first used
+  2. Nearly every local variable declaration should contain an initializer. The exception is try-catch statements if the value must be used ourside of the try block
+  3. prefer for loops to while loops
+  4. A final technique to minimize the scope of local variables is to keep methods small and focused.
+
+Item 46: Prefer for-each loops to traditional for loops
+  1. // The preferred idiom for iterating over collections and arrays
+    for (Element e : elements) {
+        doSomething(e);
+    }
+  2. Not only does the for-each loop let you iterate over collections and arrays, it lets you iterate over any object that implements the Iterable interface.
+  3. there are three common situations where you can’t use a for-each loop: Filtering, Transforming, Parallel iteration
+
+Item 47: Know and use the libraries
+  1. By using a standard library, you take advantage of the knowledge of the experts who wrote it and the experience of those who used it before you.
+  2. every programmer should be familiar with the contents of java.lang, java.util, and, to a lesser extent, java.io.
+
+Item 48: Avoid float and double if exact answers are required
+  1. The float and double types are particularly ill- suited for monetary calculations
+  2. The right way to solve this problem is to use BigDecimal, int, or long for monetary calculations.
+  3. The disavdantages to use BigDecimal: less convenience than using a primitive type and it's slower. 
+  4. If performance is of the essence, you don’t mind keeping track of the decimal point yourself, and the quantities aren’t too big, use int or long.
+
+Item 49: Prefer primitive types to boxed primitives
+  1. There are three major differences between primitives and boxed primitives:
+     First, primitives have only their values, whereas boxed primitives have identities distinct from their values.
+     Second, primitive types have only fully functional values, whereas each boxed primitive type has one nonfunctional value
+     Last, primitives are generally more time- and space-efficient than boxed primitives
+  2. Applying the == operator to boxed primitives is almost always wrong.
+  3. when you mix primitives and boxed primitives in a single operation, the boxed primitive is auto-unboxed
+  4. when should you use boxed primitives?
+     The first is as elements, keys, and values in collections
+     You must use boxed primitives as type parameters in parame- terized types
+
+Item 50: Avoid strings where other types are more appropriate
+  1. Strings are poor substitutes for other value types.
+
+Item 51: Beware the performance of string concatenation
+  1. Using the string concatenation operator repeatedly to concatenate n strings requires time qua- dratic in n. It is an unfortunate consequence of the fact that strings are immutable
+  2. To achieve acceptable performance, use a StringBuilder in place of a String
+
+Item 52: Refer to objects by their interfaces
+  1. If appropriate interface types exist, then parame- ters, return values, variables, and fields should all be declared using interface types.
+  2. If you get into the habit of using interfaces as types, your program will be much more flexible.
+  3. It is entirely appropriate to refer to an object by a class rather than an interface if no appropriate interface exists.
+
+Item 53: Prefer interfaces to reflection
+  1. The core reflection facility, java.lang.reflect, provide programmatic access to the class’s member names, field types, method signatures, and so on
+  2. Reflection's power comes at a price:
+     You lose all the benefits of compile-time type checking
+     The code required to perform reflective access is clumsy and verbose.
+     Perferformance suffers
+  3. Reflection is used only at design time. As a rule, objects should not be accessed reflectively in normal applications at runtime
+  4. A legitimate, if rare, use of reflection is to manage a class’s dependencies on other classes, methods, or fields that may be absent at runtime.
+      
+Item 54: Use native methods judiciously
+  1. The Java Native Interface (JNI) allows Java applications to call native methods, which are special methods written in native programming languages such as C or C++.
+  2. It is rarely advisable to use native methods for improved performance.
+
+Item 55: Optimize judiciously
+  1. Strive to write good programs rather than fast ones.
+  2. Strive to avoid design decisions that limit performance.
+  3. Consider the performance consequences of your API design decisions.
+  4. It is a very bad idea to warp an API to achieve good perfor- mance.
+  5. measure perfor- mance before and after each attempted optimization.
+
+Item 56: Adhere to generally accpeted naming conventions
+  1. Loosely speaking, naming conventions fall into two categories: typographical and grammatical.
+  2. These conventions should not be followed slavishly if long-held conventional usage dictates otherwise
+
+Item 57: Use exceptions only for exceptional conditions
+  1. exceptions are, as their name implies, to be used only for exceptional conditions; they should never be used for ordi- nary control flow.
+  2. A well-designed API must not force its clients to use exceptions for ordinary control flow.
+
+Item 58: Use checked exceptions for recoverable conditions and runtime exceptions for programming errors
+  1. The Java programming language provides three kinds of throwables: checked excep- tions, runtime exceptions, and errors.
+  2. use checked exceptions for conditions from which the caller can reasonably be expected to recover.
+  3. There are two kinds of unchecked throwables: runtime exceptions and errors. Use runtime exceptions to indicate programming errors.
+  4. all of the unchecked throwables you implement should subclass RuntimeException
+
+Item 59: Avoid unnecessary use of checked exceptions
+  1. if the exceptional condition cannot be prevented by proper use of the API and the programmer using the API can take some useful action once confronted with the exception. Unless both of these conditions hold, an unchecked exception is more appropriate.
+  2. One technique for turning a checked exception into an unchecked exception is to break the method that throws the exception into two methods, the first of which returns a boolean that indicates whether the exception would be thrown.
+
+Item 60: Favor the use of standard exceptions
+  1. IllegalArgumentException: Non-null parameter value is inappropriate
+  2. IllegalStateException: Object state is inappropriate for method invocation
+  3. UnsupportedOperationException: Object does not support method
+
+Item 61: Throw exceptions appropriate to the abstraction
+  1. It is disconcerting when a method throws an exception that has no apparent connec- tion to the task that it performs.
+  2. higher layers should catch lower-level exceptions and, in their place, throw exceptions that can be explained in terms of the higher-level abstraction. This idiom is known as exception translation
+  3. While exception translation is superior to mindless propagation of excep- tions from lower layers, it should not be overused.
+
+Item 62: Document all exceptions thrown by each method
+  1. Always declare checked exceptions individually, and document precisely the conditions under which each one is thrown using the Javadoc @throws tag.
+  2. Use the Javadoc @throws tag to document each unchecked exception that a method can throw, but do not use the throws keyword to include unchecked exceptions in the method declaration.
+  3. If an exception is thrown by many methods in a class for the same reason, it is acceptable to document the exception in the class’s documentation comment
+
+Item 63: Include failure-capture information in detailed messages
+  1. To capture the failure, the detail message of an exception should contain the values of all parameters and fields that “contributed to the exception.”
+
+Item 64: Strive for failure atomicity
+  1. Generally speaking, a failed method invocation should leave the object in the state that it was in prior to the invocation.
+  2. To achieve failure atomic:
+     The simplest is to design immu- table objects
+     For methods that operate on mutable objects, the most common way to achieve failure atomicity is to check parameters for validity before performing the operation
+     A closely related approach to achieving failure atomicity is to order the com- putation so that any part that may fail takes place before any part that modifies the object.
+     Recovery code
+     A final approach to achieving failure atomicity is to perform the operation on a temporary copy of the object and to replace the contents of the object with the temporary copy once the operation is complete.
+
+Item 65: Don't ignore exceptions
+  1. A final approach to achieving failure atomicity is to perform the operation on a temporary copy of the object and to replace the contents of the object with the temporary copy once the operation is complete.
+  2. At the very least, the catch block should contain a comment explaining why it is appro- priate to ignore the exception.
+
+Item 66: Synchronize access to shared mutable data
