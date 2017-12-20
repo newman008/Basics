@@ -381,3 +381,67 @@ Item 65: Don't ignore exceptions
   2. At the very least, the catch block should contain a comment explaining why it is appro- priate to ignore the exception.
 
 Item 66: Synchronize access to shared mutable data
+  1. Synchronize access to shared mutable data
+  2. Not only does synchroniza- tion prevent a thread from observing an object in an inconsistent state, but it ensures that each thread entering a synchronized method or block sees the effects of all previous modifications that were guarded by the same lock.
+  3. Synchronization is required for reliable communica- tion between threads as well as for mutual exclusion.
+  4. Do not use Thread.stop
+  5. The language specification guarantees that reading or writing a variable is atomic unless the variable is of type long or double
+  6. synchronization has no effect unless both read and write operations are synchronized
+  7. While the volatile modifier performs no mutual exclusion, it guarantees that any thread that reads the field will see the most recently written value
+  8. confine mutable data to a single thread
+
+Item 67: Avoid excessive synchronization
+  1. To avoid liveness and safety failures, never cede control to the client within a synchronized method or block
+  2. Thread-safe observable set with CopyOnWriteArrayList
+  3. An alien method invoked outside of a synchronized region is known as an open call
+  4. As a rule, you should do as little work as possible inside synchronized regions.
+  5. cost of oversynchronization is that it can limit the VM’s ability to optimize code execution
+  6. When in doubt, do not synchronize your class, but document that it is not thread-safe
+  7. If a method modifies a static field, you must synchronize access to this field, even if the method is typically used only by a single thread.
+
+Item 68: Prefer executors and tasks to threads
+  1. In release 1.5, java.util.concurrent was added to the Java platform. This package contains an Executor Framework, which is a flexible interface-based task execution facility.
+  2. If you’re writing a small program, or a lightly loaded server, using Executors.new- CachedThreadPool is generally a good choice
+  3. Therefore, in a heavily loaded production server, you are much better off using Executors.newFixedThreadPool
+  4. There are two kinds of tasks: Runnable and Callable(which is like Runnable, except that it returns a value)
+  5. The Executor Framework also has a replacement for java.util.Timer, which is ScheduledThreadPoolExecutor
+
+Item 69: Prefer concurrentency utilities to wait and notify
+  1. Given the difficulty of using wait and notify correctly, you should use the higher-level concurrency utilities instead.
+  2. The higher-level utilities in java.util.concurrent fall into three categories: the Executor Framework, concurrent collections; and synchronizers
+  3. it is impossible to exclude concurrent activity from a concurrent collection; locking it will have no effect
+  4. use ConcurrentHashMap in preference to Collections.synchro- nizedMap or Hashtable
+  5. Synchronizers are objects that enable threads to wait for one another, allowing them to coordinate their activities.
+  6. The most commonly used synchronizers are CountDownLatch and Semaphore. Less commonly used are CyclicBarrier and Exchanger.
+  7. There is seldom, if ever, a reason to use wait and notify in new code.
+
+Item 70: Document thread safety
+  1. The presence of the synchronized modifier in a method declaration is an implementation detail, not a part of its exported API. It does not reliably indicate that a method is thread-safe.
+  2. To enable safe concurrent use, a class must clearly document what level of thread safety it supports.
+  3. Levels of thread safety:
+     immutable - Instances of this class appear constant, no external synchronizetion required. E.g. String, Long, BigInteger
+     unconditionally thread-safe - Instances are mutable but the class has sufficient synchronization that its instance can be used concurrently. No need for external synchronization. E.g. Random, ConcurrentHashMap
+     conditionally thread-safe - Like unconditionally thread-safe except that some methods require extenral synchronization like Collections.synchronized
+     not thread-safe - Instance of this class are mutable, E.g. general purpose of collection implementation, ArrayList and HashMap
+     thread-hostile - This class is not safe for concurrent use even if all method in vocations are surrounded by external synchronization.
+  4. These categories correspond roughly to the thread safety annotations in Java Concurrency in Practice, which are Immutable, ThreadSafe, and NotThreadSafe
+  5. If you write an unconditionally thread-safe class, consider using a private lock object in place of synchronized methods. This protects you against synchronization interference by clients and subclasses and gives you the flexibility to adopt a more sophisticated approach to concurrency control in a later release.
+
+Item 71: Use lazy initialization judiciously
+  1. Under most circumstances, normal initialization is preferable to lazy ini- tialization. 
+  2. If you need to use lazy initialization for performance on a static field, use the lazy initialization holder class idiom.
+  3. If you need to use lazy initialization for performance on an instance field, use the double-check idiom.
+
+Item 72: Don't depend on the thread scheduler
+  1. Any program that relies on the thread scheduler for correctness or performance is likely to be nonportable.
+  2. Threads should not run if they aren’t doing useful work.
+  3. Thread priorities are among the least portable features of the Java plat- form.
+
+Item 73: Avoid thread groups
+  1. thread groups are obsolete
+
+Item 74: Implement Serializable judiciously
+  1. A major cost of implementing Serializable is that it decreases the flexi- bility to change a class’s implementation once it has been released.
+  2. you should carefully design a high-quality serialized form that you are willing to live with for the long haul
+  3. A second cost of implementing Serializable is that it increases the likeli- hood of bugs and security holes.
+  4. A third cost of implementing Serializable is that it increases the testing burden associated with releasing a new version of a class
