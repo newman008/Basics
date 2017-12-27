@@ -445,3 +445,35 @@ Item 74: Implement Serializable judiciously
   2. you should carefully design a high-quality serialized form that you are willing to live with for the long haul
   3. A second cost of implementing Serializable is that it increases the likeli- hood of bugs and security holes.
   4. A third cost of implementing Serializable is that it increases the testing burden associated with releasing a new version of a class
+  5. Value classes such as Date and BigInteger should implement Serializable, as should most collection classes. Classes representing active entities, such as thread pools, should rarely implement Serializable
+  6. Classes designed for inheritance should rarely implement Serializable, and interfaces should rarely extend it.
+  7. you should consider providing a parameterless constructor on nonserializable classes designed for inheritance
+  8. Inner classes should not implement Serializable
+  9. For a class designed for inheritance, an intermediate design point between implementing Serializable and prohibiting it in subclasses is to provide and accessible parameterless constructor. This design point permits but not require subclasses to implement Serializable
+
+Item 75: Consider using a custom serialized form
+  1. Do not accept the default serialized form without first considering whether it is appropriate
+  2. The default serialized form is likely to be appropriate if an object’s phys- ical representation is identical to its logical content.
+  3. Even if you decide that the default serialized form is appropriate, you often must provide a readObject method to ensure invariants and security
+  4. Using the default serialized form when an object’s physical representation differs substantially from its logical data content has four disadvantages:
+     1) It permanently ties the exported API to the current internal representation
+     2) It can consume excessive space
+     3) It can consume excessive space
+     4) It can cause stack overflow
+  5. If all instance fields are transient, it is technically permissible to dispense with invoking defaultWriteObject and defaultReadObject, but it is not recommended
+  6. Before deciding to make a field nontransient, convince yourself that its value is part of the logical state of the object. 
+  7. Regardless of what serialized form you choose, declare an explicit serial version UID in every serializable class you write
+
+Item 76: Write readObject methods defensively
+  1. When an object is deserialized, it is critical to defensively copy any field containing an object reference that a client must not possess.
+  2. Do not use the writeUnshared and readUnshared methods.
+  3. anytime you write a readObject method, adopt the mind-set that you are writing a public constructor that must produce a valid instance regard- less of what byte stream it is given
+  4. A readObject method must not invoke an overridable method, directly or indirectly
+
+Item 77: For instance control, prefer enum types for readResolve
+  1. If you depend on readResolve for instance control, all instance fields with object reference types must be declared transient
+  2. you should use enum types to enforce instance control invari- ants wherever possible
+
+Item 78: Consider serialization proxies instead of serialized instances
+  1. Consider the serialization proxy pattern whenever you find your- self having to write a readObject or writeObject method on a class that is not extendable by its clients.
+  2. The added power and safety of the serialization proxy pattern are not free.
