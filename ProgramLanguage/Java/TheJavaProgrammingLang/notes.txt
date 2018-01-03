@@ -1,0 +1,110 @@
+THE Java Programming Language, Fourth Edition
+
+Chap 23: System Programming
+Sometimes your application must interact with the runtime system of the Java virtual machine or the underlying operating system. System/Runtime/Process
+23.1 The System Class
+  1) System provides functionality in four general areas: Standard I/O streams, Manipulating system properties, Utilities and convenience methods for accessing the current Runtime, Security
+
+23.2 Creating Processes
+  1) You can execute new programs by using one of the Runtime.exec convenience methods. Each successful invocation of exec creates a new Process object that represents the program running in its own process.
+  2) The exec methods return a Process object for each child process created. This object represents the child process in two ways. First, it provides methods to get input, output, and error streams for the child process. Second, a Process object represents the child process is by providing methods to control the process and discover its termination status
+  3) The exec methods of Runtime are convenience methods that use the more general ProcessBuilder class. ProcessBuilder encapsulates the three key attributes of an external process: the command, the environment, and the current working directory.
+  4) Portability - Any program that uses exec or ProcessBuilder is not portable across all systems. Not all environments have processes
+
+23.3 ShutDown
+  1) A Runtime can also be shut down explicitly with its exit method
+  2) An application can register a shutdown hook with the runtime system. Shutdown hooks are threads that represent actions that should be taken before the virtual machine exits. Hooks typically clean up external resources such as files and network connections.
+
+23.4 The Rest of Runtime
+  1) Runtime class provides functionality in six different areas:
+     - Interacting with the garbage collector and querying memory usage
+     - Asking for the number of processes available
+     - Executing external program
+     - Terminating current runtime
+     - Loading native code libraries
+     - Debugging
+
+23.5 Security
+  1) The java.lang.SecurityManager class allows applications to implement a security policy
+  2) Permissions
+  3) The security policy for a given execution of the runtime system is represented by a java.security.Policy object
+  4) Access Controllers and Privileged Execution
+
+Chap 24: Internationalization and Localization
+24.1 Locale
+  1) A java.util.Locale object describes a specific placecultural, political, or geographical. Using a locale, objects can localize their behavior to a user's expectations. An object that does so is called locale-sensitive
+
+24.2 Resource Bundles
+  1) If you put English text directly into your program, localizing that code is difficultit requires finding all the strings in your program. The resource bundle classes in java.util help you address this problem in a cleaner and more flexible fashion.
+  2) The abstract class ResourceBundle defines methods to look up resources in a bundle by string key and to provide a parent bundle that will be searched if a bundle doesn't have a key.
+
+24.3 Currency
+  1) Currency encoding is highly sensitive to locale, and the java.util.Currency class helps you properly format currency values.
+
+24.4 Time, Dates, and Calendars
+  1) Time is represented as a long integer measured in milliseconds since midnight Greenwich Mean Time (GMT) January 1, 1970. This starting point for time measurement is known as the epoch
+  2) Calendar
+  3) TimeZone
+  4) GregorianCalendar and SimpleTimeZone
+
+24.5 Formatting and Parsing Dates and Times
+  1) Date and time formatting is a separate issue from calendars, although they are closely related. Formatting is localized in a different way
+
+24.6 Internationalization and Localization for Text
+  1) Collation - Comparing strings in a locale-sensitive fashion is called collation.
+  2) Formatting and Parsing - The abstract Format class provides methods to format and parse objects according to a locale. Format declares a format method that takes an object and returns a formatted String
+  3) Text Boundaries - Parsing requires finding boundaries in text. The class BreakIterator provides a locale-sensitive tool for locating such break points.
+
+Chap 25: Standard Package
+25.1. java.awt The Abstract Window Toolkit
+  1) Although you can use absolute placement in AWT, it is not recommended
+  2) When you need to draw your own graphics on the screen, the simplest technique is to subclass Component or Container, overriding the paint method to draw what you need using the Graphics object passed to paint.
+  3) The AWT is an event-based system.
+  4) AWT vs Swing vs JavaFX
+     AWT is platform specifc, "back in my day..."
+     Swing only for desktop applications, "Swing is essentially dead..."
+     JavaFX Desktop, Website and Handheld Device friendly
+  
+25.2 java.applet Applets
+  1) When an <applet> or <object> tag is found in a web page's HTML, the browser downloads the code for the named class from a URL, creates an object of that class, creates a region on the web page for that object to control, and then invokes the object's init methodoften creating a THReadGroup and THRead just for this applet.
+  2) four lifecycles: init/start/stop/destroy
+  3) Applets usually run in a highly constrained security environment to protect your computer and network from unwelcome inspection or invasion by a hostile applet.
+
+25.3 java.beans Components
+  1) The java.beans package provides necessary and useful classes for writing such beans. A bean exports properties, generates events, and implements methods.
+
+25.4 java.math Mathematics
+  1) The package java.math is destined for classes that help with mathematical calculations. Currently, it has three classesBigInteger, BigDecimal and MathContextand an enum, RoundingMode, that defines different rounding modes.
+
+25.5 java.net The Network
+  1) The java.net package provides classes for working with network infrastructure, such as sockets, network addresses, Uniform Resource Identifiers (URIs), and Uniform Resource Locators (URLs).
+  2) The java.net package is centered around the Socket class, which represents a connection to another socketpossibly on another machineacross which bytes can flow.
+
+25.6 java.rmi Remote Method Invocation
+  1) RMI is explicitly designed to take advantage of having both client and server in the Java programming language
+
+25.7 java.security and Related Package Security Tools
+
+25.8 java.sql Relational Database Access
+
+25.9 Utility Subpackages
+  1) Concurrency Utilities java.util.concurrent
+  2) Archive Files java.util.jar
+  3) ZIP Files java.util.zip
+
+25.10 javax.* Standard Extensions
+  1) Standard extensions are packages or collections of packages that can be downloaded to extend the capabilities of a particular virtual machine.
+  2) Conversely, packages with javax in the name may become part of the main set of packages over time. e.g. javax.swing javax.accessibility
+
+25.11 javax.accessibility Accessibility for GUIs
+
+25.12 javax.naming Directory and Naming Services
+  1) This package defines the naming operations of the Java Naming and Directory Interface™ (JNDI), with the subpackage javax.naming.directory, defining the directory operations.
+
+25.13 javax.sound Sound Manipulation
+
+25.14. javax.swing Swing GUI Components
+
+25.15. org.omg.CORBA CORBA APIs
+  1) The package org.omg.CORBA, its various subpackages and other org.omg subpackages (such as CosNaming) provide the mapping of the OMG CORBA APIs and services to the Java programming language.
+  2) CORBA is a way to send messages between processes that are not necessarily written in the same programming language.
